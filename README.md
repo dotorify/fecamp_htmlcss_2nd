@@ -367,6 +367,13 @@ body {
 .theme-light {/** */}
 ```
 
+- Descendant Combinator (&nbsp;&nbsp;)
+
+```css
+.menu h2 {/** */}
+```
+
+
 #### 4.3. Box Model
 
 - 모든 HTML 박스(=요소)는 사각형(box)으로 이루어져 있다.
@@ -407,6 +414,44 @@ body {
     </tr>
   </tbody>
 </table>
+
+#### 4.4. Overflow
+
+
+
+### 5. Layout
+
+1. 전통적인 Layout 구현법 (float)
+    - IE에서 사용 (Flex를 지원하지 않아서)
+2. 현대적인 Layout 구현법 (flex, grid)
+
+```css
+
+header {
+  display: flex;
+  /*
+   * flex layout 구현을 위한 포석
+   * 부모 요소에 display 속성을 이용하여 레이아웃을 정의
+   */
+
+  justify-content: center;
+  /*
+   * justify-content
+   * - flex layout의 속성 중 하나
+   * - 컨텐츠를 중앙으로 정렬 할 수 있다.
+   * - text-align:center는 사용하면 안된다. Why? flex 범주이기 때문에
+  */
+}
+
+h1 {
+  flex: 1
+  /*
+   *
+   */
+}
+
+```
+
 
 ----
 

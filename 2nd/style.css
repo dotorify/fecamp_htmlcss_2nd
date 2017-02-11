@@ -12,11 +12,16 @@ body {
 }
 
 header {
-
+  display: flex;
 }
 
 section {
   text-align: center;
+}
+h1 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
 }
 h2 {
   font-size: 18px;
@@ -52,4 +57,27 @@ a {
 /* Section Heading */
 .section-title {
   font-size: 28px;
+}
+
+.menu {
+  display: flex;
+
+  justify-content: center;
+  /*
+   * justify-content
+   * - flex layout의 속성 중 하나
+   * - 컨텐츠를 중앙으로 정렬 할 수 있다.
+   * - text-align:center는 사용하면 안된다. Why? flex 범주이기 때문에
+   */
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.menu > h2 {
+  display: none;
+}
+
+.menu a {
+  min-width: 180px;
+  padding: 54px 0 20px;
 }
