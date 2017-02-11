@@ -2,6 +2,10 @@
 패스트캠퍼스 HTML&amp;CSS 입문 2기
 
 ----
+# 목차
+
+#### [1. 수업 목표](#수업-목표)
+----
 
 ## 수업 목표
 - 이론적으로 HTML / CSS 접근
@@ -276,13 +280,96 @@ Sample
 </html>
 ````
 
+## 2nd - 2017.02.11
 
+> http: hypertext transfer protocol
+> https: hypertext transfer protocol over SSL(Secure Socket Layer)
+
+HTML을 잘 작성해야하는 이유
+- 로봇(기계)가 조금 더 수월하게 읽어들이기 위함.
+
+### 1. Anchor
+
+```html
+<a></a>
+```
+
+- 필수 속성: href
+
+### 2. Paragraph
+
+```html
+<p></p>
+```
+
+- 문장 요소
+
+### 3. link
+
+```html
+  <link href="" rel="">
+```
+
+- 필수 속성: rel, href
+- rel
+  - relation
+  - link해오는 리소스 파일의 포맷
+- href
+  - hyper reference
+  - link해오는 리소스 파일의 경로
+
+### 4. CSS
+
+> CSS: Cascading Style Sheet
+
+#### 4.1. 상속(Cascading, Inheritence)
+
+- 부모 요소에 들어있는 CSS가 자식 요소에 영향을 준다. (A.K.A. cascading 하는 구조)
+- cascading => 폭포가 흐르는 형태
+
+#### 4.2. Selector
+
+- Tag Selector
+
+```css
+html {
+  /* Root 요소 */
+}
+
+body {
+  /* 일반적으로 body에서부터 CSS작성 시작 */
+}
+```
+
+- Class Selector (.)
+
+```css
+.theme-dark {/** */}
+
+.theme-light {/** */}
+```
+
+#### 4.3. Box Model
+
+- 모든 HTML 박스(=요소)는 사각형(box)으로 이루어져 있다.
+
+|속성|설명|
+|--|--|
+|width|가로 길이, 너비|
+|height|세로 길이, 높이|
+|padding|<p>박스의 외곽선에서부터 내부 컨텐츠 사이의 여백</p><p>top, right, bottom, left / 시계방향</p><p>padding-top, padding-bottom / 각 방향에만</p><p>border (외곽선)</p><p>  - 포맷: {width} {style} {color}</p><p> - e.g. 1px solid #000000; === 1px solid #000;</p><p>엔진이 읽는 방법: 순차적으로 읽다가 4개가 아니면 처음부터 다시 읽는다.</p>|
+|margin|<p>박스와 박스 사이의 여백</p><p>배경색을 넣을 수 없다.</p><p>투명한 배경(transparent)</p><p>중첩이 된다.(collapsping margin - margin 병합현상) https://jsfiddle.net/8qcy5kuf/ </p>|
 
 
 ----
 
-iphone 사이트 따라해보기
+### 실습: iPhone 페이지 만들기
 
+- 시각적인 요소는 CSS로 제어가능하므로 속지마라.
+- 반복되는 스타일이 있다면 재활용 해라. 일괄 리팩토링이 쉬워진다. (e.g. 클래스 생성)
+
+1. 텍스트 중앙정렬
+2. 폰트크기 조정
 
 ----
 

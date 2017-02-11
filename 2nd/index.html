@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="initial-scale=1">
+      <title>Apple</title>
+
+      <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+      <header>
+        <a href="#">메뉴></a>
+        <h1><a href="#">애플></a></h1>
+        <!--
+          h1 요소는 문서당 1개만 사용하는 것을 권장
+        -->
+        <a href="#">장바구니></a>
+      </header>
+      <main>
+        <section>
+          <h2>메뉴</h2>
+          <a href="#">iPhone 7</a>
+          <a href="#">iPhone 6s</a>
+          <a href="#">iPhone SE</a>
+          <a href="#">iOS 10</a>
+          <a href="#">액세서리</a>
+          <a href="#">비교하기</a>
+        </section>
+        <section class="theme-dark box">
+          <h2>iPhone</h2>
+          <!--
+            Section 요소에는 h태그 필수
+          -->
+          <p>이것이 바로 7.</p>
+          <a href="#">더 알아보기</a>
+          <a href="#">구입하기</a>
+        </section>
+        <!--
+          div로 작성하면 의미론적으로 구분되지않음.
+        -->
+
+        <section class="theme-light box">
+          <h2>AirPods</h2>
+          <p>선이 없다. 간결하다. 경이롭다.</p>
+          <a href="#">더 알아보기</a>
+        </section>
+
+        <section class="theme-dark box">
+          <h2>액세서리</h2>
+          <p>7에 더하다.</p>
+          <a href="#">iPhone 액세서리 쇼핑하기</a>
+        </section>
+
+        <section class="theme-light box">
+          <h2>Product RED</h2>
+          <p>(RED)를 사다. 미래를 살리다.</p>
+          <p class="desc">구입할 때마다 에이즈 없는 세대에 한발 더 가까워집니다.</p>
+          <a href="#">더 알아보기</a>
+        </section>
+
+        <section>
+          <h2 class="section-title">iPhone 모델 비교하기.</h2>
+          <a href="#">당신에게 가장 알맞은 iPhone을 찾아보세요</a>
+        </section>
+      </main>
+      <!--
+        <div class="apple"></div>
+        위 보다 main을 사용하는 것이 의미론적으로 더 명확하다.
+      -->
+  </body>
+</html>

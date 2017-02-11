@@ -1,0 +1,55 @@
+/*
+ * CSS
+ * - 기초 문법
+ * - 레이아웃
+ */
+
+
+html {}
+body {
+  margin: 0;
+  background: #eee;
+}
+
+header {
+
+}
+
+section {
+  text-align: center;
+}
+h2 {
+  font-size: 18px;
+  margin: 0;
+}
+p {
+  font-size: 28px;
+}
+a {
+  color: royalblue;
+}
+
+
+.box {
+  padding: 28px 0 280px;
+  margin-bottom: 15px;
+}
+
+.theme-dark {
+  background-color: black;
+  color: white;
+}
+
+.theme-light {
+  background-color: white;
+}
+
+/* Description */
+.desc {
+  font-size: 14px;
+}
+
+/* Section Heading */
+.section-title {
+  font-size: 28px;
+}
