@@ -93,12 +93,30 @@
     - meta, ... [기타 종류는 여기서 확인](http://webdesign.about.com/od/htmltags/qt/html-void-elements.htm)
 
 
-
-|Attr|Value|Comment|
-|---|---|---|
-|name|viewport|모바일에서 접근 했을 때, 어떻게 보여줄 것인가를 정하는 속성|
-|content|initial-scale|1:단말 사이즈에 맞게 사이즈가 조정 됨|
-|content|width|device-width: 기기의 가로사이즈 (모바일에서만 사용하며, 거의 사용하지 않음) |
+<table>
+  <thead>
+    <th>속성</th>
+    <th>값</th>
+    <th>설명</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>viewport</td>
+      <td>모바일에서 접근 했을 때, 어떻게 보여줄 것인가를 정하는 속성</td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>initial-scale</td>
+      <td>1:단말 사이즈에 맞게 사이즈가 조정 됨</td>
+    </tr>
+    <tr>
+      <td>content</td>
+      <td>width</td>
+      <td>device-width: 기기의 가로사이즈 (모바일에서만 사용하며, 거의 사용하지 않음)</td>
+    </tr>
+  </tbody>
+</table>
 
 - viewport에서 사용할 수 있는 content
     - initial-scale: 최대 확대값
