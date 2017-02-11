@@ -440,6 +440,8 @@ header {
    * - flex layout의 속성 중 하나
    * - 컨텐츠를 중앙으로 정렬 할 수 있다.
    * - text-align:center는 사용하면 안된다. Why? flex 범주이기 때문에
+   *
+   * 주의: 개발도구에서 모바일페이지 선택 후 단말에서 볼 때, 왼쪽 컨텐츠가 보이지 않는 경우가 있다. justify-content를 center로 설정했기때문인데 후에 media query에서 관련 내용을 다시 설명 예정.
   */
 }
 
