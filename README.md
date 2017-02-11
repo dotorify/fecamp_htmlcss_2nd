@@ -291,7 +291,7 @@ HTML을 잘 작성해야하는 이유
 ### 1. Anchor
 
 ```html
-<a></a>
+<a href=""></a>
 ```
 
 - 필수 속성: href
@@ -353,13 +353,42 @@ body {
 
 - 모든 HTML 박스(=요소)는 사각형(box)으로 이루어져 있다.
 
-|속성|설명|
-|--|--|
-|width|가로 길이, 너비|
-|height|세로 길이, 높이|
-|padding|<p>박스의 외곽선에서부터 내부 컨텐츠 사이의 여백</p><p>top, right, bottom, left / 시계방향</p><p>padding-top, padding-bottom / 각 방향에만</p><p>border (외곽선)</p><p>  - 포맷: {width} {style} {color}</p><p> - e.g. 1px solid #000000; === 1px solid #000;</p><p>엔진이 읽는 방법: 순차적으로 읽다가 4개가 아니면 처음부터 다시 읽는다.</p>|
-|margin|<p>박스와 박스 사이의 여백</p><p>배경색을 넣을 수 없다.</p><p>투명한 배경(transparent)</p><p>중첩이 된다.(collapsping margin - margin 병합현상) https://jsfiddle.net/8qcy5kuf/ </p>|
-
+<table>
+  <thead>
+      <th>속성</th>
+      <th>설명</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>width</td>
+      <td>가로 길이, 너비</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>세로 길이, 높이</td>
+    </tr>
+    <tr>
+      <td>padding</td>
+      <td>
+        <p>박스의 외곽선에서부터 내부 컨텐츠 사이의 여백</p>
+        <p>top, right, bottom, left / 시계방향</p>
+        <p>padding-top, padding-bottom / 각 방향에만</p>
+        <p>border (외곽선)</p><p>  - 포맷: {width} {style} {color}</p>
+        <p> - e.g. 1px solid #000000; === 1px solid #000;</p>
+        <p>엔진이 읽는 방법: 순차적으로 읽다가 4개가 아니면 처음부터 다시 읽는다.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>margin</td>
+      <td>
+        <p>박스와 박스 사이의 여백</p>
+        <p>배경색을 넣을 수 없다.</p>
+        <p>투명한 배경(transparent)</p>
+        <p>중첩이 된다.(collapsping margin - margin 병합현상)  <a href="https://jsfiddle.net/8qcy5kuf/">jsfiddle 예제</a> </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ----
 
