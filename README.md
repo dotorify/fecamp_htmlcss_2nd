@@ -558,7 +558,27 @@ h1 {
 - Service Worker
 - Canvas (bitmap)
 
+#### List
 
+```html
+<ul>
+  <li></li>
+</ul>
+
+<ol>
+  <li></li>
+</ol>
+```
+
+* div밑이나 li요소 밑에 P가없으면 익명으로 P요소가 있다고 인식한다.
+
+#### Nav
+
+```html
+<nav></nav>
+```
+
+>
 
 
 ----
@@ -568,3 +588,4 @@ h1 {
 [Microdata](): 검색엔진 상위에 노출하기 위한...
 [SK 신현석:HTML5.1 변경사항](https://hyeonseok.com/soojung/webstandards/2017/01/28/808.html)
 [CSS 반복 체크:CSS-Purge](https://github.com/rbtech/css-purge)
+[만들어볼만한 페이지:더가디언](https://www.theguardian.com/international)
