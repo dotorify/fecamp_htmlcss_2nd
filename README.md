@@ -32,7 +32,11 @@
 ```HTML
 <!DOCTYPE html>
 <!--
-  - DOCTYPE : HTML 버전 (최신 버전을 사용하겠다는 의미. "17.02기준 5.1을 사용하겠다")
+  - DOCTYPE html
+  - DOCTYPE = Document Type => 문서의 타입
+   1) 이 문서가 HTML|XHTML|XML|SVG 인지 (즉, 어떤 언어인지)
+   2) 이 문서가 HTML이라면 어떤 버전인지
+  - 최신 버전의 HTML을 사용하겠다는 의미. `17.02기준 5.1을 사용하겠다)
   - 모드 종류
     * quirks mode(default) : 오래된 웹사이트가 현재의 브라우저에도 이전 처럼 잘 보여야 한다.
 -->
@@ -92,12 +96,15 @@
     - 닫는 태그가 없는 요소 (9~10가지)
     - meta, ... [기타 종류는 여기서 확인](http://webdesign.about.com/od/htmltags/qt/html-void-elements.htm)
 
+##### 3.1.1. ViewPort
+
+> 웹사이트에 접근해서 유저가 바라보는 뷰
 
 <table>
   <thead>
-    <th>속성</th>
-    <th>값</th>
-    <th>설명</th>
+    <th>Property</th>
+    <th width="150px">Value</th>
+    <th>Comment</th>
   </thead>
   <tbody>
     <tr>
@@ -106,24 +113,30 @@
       <td>모바일에서 접근 했을 때, 어떻게 보여줄 것인가를 정하는 속성</td>
     </tr>
     <tr>
-      <td>content</td>
+      <td rowspan="5">content</td>
       <td>initial-scale</td>
-      <td>1:단말 사이즈에 맞게 사이즈가 조정 됨</td>
+      <td><span>기본 배율.</span><br><span>1:단말 사이즈에 맞게 사이즈가 조정 됨</span></td>
     </tr>
     <tr>
-      <td>content</td>
-      <td>width</td>
-      <td>device-width: 기기의 가로사이즈 (모바일에서만 사용하며, 거의 사용하지 않음)</td>
+      <td>minimum-scale</td>
+      <td>최소 축소 가능 배율 ( 0.1 ~ 1 사이 )</td>
     </tr>
+    <tr>
+      <td>maximum-scale</td>
+      <td>최대 확대 가능 배율 (1 ~ 4 사이 )</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td><span>가로 길이 (device-width, px 고정값)</span><br><small>device-width: 기기의 가로사이즈 (모바일에서만 사용하며, 거의 사용하지 않음)<small></td>
+    </tr>
+    <tr>
+      <td>user-scaleable</td>
+      <td><span>유저에게 확대/축소를 할 수 있게 할 것인지 ( true | false )</span><br><span>(권장하지 않음.)</span></td>
+    </tr>
+
   </tbody>
 </table>
 
-- viewport에서 사용할 수 있는 content
-    - initial-scale: 최대 확대값
-    - width: 가로 길이
-    - maximum-scale: 최대 확대값 (1~4)
-    - minimum-scale: 최대 축소값 (0.1 ~ 1 사이)
-    - user-scaleable: (true|false) 유저가 확대 축소 기능을 사용할 수 있게 할 지 (권장 x)
 
 ````
 # 실무 TIP - for iPhone safari
@@ -141,13 +154,35 @@ Example:
 ````
 
 
+##### 3.1.2. Charset (Character Set)
+> 문자열 집합
 
-charset: 문자열 집합
-
-|Attr|Value|Comment|
-|---|---|---|
-|charset|UTF-8<br>(unicode 8bit)|현대에서 사용하는 (이모티콘 포함)  전 세계 대부분의 문자열을 지원|
-||EUC-KR|공식적으로 한글만 지원하지만 모던 브라우저들은 UTF-8로 자동 변환 해주기도 한다.|
+<table>
+  <thead>
+    <th>Property</th>
+    <th>Value</th>
+    <th>Comment</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4">charset</td>
+      <td>UTF-8<br>(unicode 8bit)</td>
+      <td>현대에서 사용하는 (이모티콘 포함)  전 세계 대부분의 문자열을 지원</td>
+    </tr>
+    <tr>
+      <td>EUC-KR</td>
+      <td>공식적으로 한글만 지원하지만 모던 브라우저들은 UTF-8로 자동 변환 해주기도 한다.</td>
+    </tr>
+    <tr>
+      <td>UTF-16</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <td>UTF-32</td>
+      <td>...</td>
+    </tr>
+  </tbody>
+</table>
 
 Example:
 ```html
@@ -336,6 +371,17 @@ HTML을 잘 작성해야하는 이유
   - hyper reference
   - link해오는 리소스 파일의 경로
 
+
+Example:
+```html
+<link rel="icon" href="favicon.png">
+<!--
+  - favicon 불러오는 방법
+  - IE 구버전을 대응하지 않아도 되는 경우: png파일
+  - IE 10이하를 대응해야 되는 경우: ico파일
+-->
+```
+
 ### 4. CSS
 
 > CSS: Cascading Style Sheet
@@ -469,11 +515,56 @@ h1 {
 ### 실습2. AMP 페이지 만들기
 
 
-### 실습3. Google Web 
+### 실습3. Google Web
 
 ----
 
+## 3rd - 2017.02.14
+
+### HTML
+> HTML: Hyper Text Markup Language
+>  링크로 이동이 가능한 마크업 언어
+
+```
+- HT(Hyper Text)
+  - 링크 (Anchor)
+- ML(Markup Language)
+```
+
+
+#### History
+
+```
+1991년 HTML 1.0 (20개의 요소)
+1993년 HTML 1.0 표준
+...
+1999년 HTML 4.01 표준
+...
+2003년   XHTML 1.0
+2004년   XHTML 1.1
+2007년   XHTML 2.0 (망함)
+...
+2014년 HTML 5 표준
+2016년 HTML 5.1 표준
+
+```
+
+
+#### HTML5 API [W3C WebAPIs ](https://www.w3.org/TR/html5/webappapis.html), [참고](http://html5index.org/)
+
+- Geolocation
+- Local Storage
+- Session Storage
+- Service Worker
+- Canvas (bitmap)
+
+
+
+
+----
 #### Reference
 
 [Emoji](http://unicode.org/emoji/charts/full-emoji-list.html)
 [Microdata](): 검색엔진 상위에 노출하기 위한...
+[SK 신현석:HTML5.1 변경사항](https://hyeonseok.com/soojung/webstandards/2017/01/28/808.html)
+[CSS 반복 체크:CSS-Purge](https://github.com/rbtech/css-purge)
