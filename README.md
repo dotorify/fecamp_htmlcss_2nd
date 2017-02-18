@@ -578,8 +578,204 @@ h1 {
 <nav></nav>
 ```
 
->
 
+
+
+## 3rd - 2017.02.18
+
+### CSS
+
+> Cascading Style Sheet
+
+- 폭포수가 흐르는 형태
+- 부모요소의 CSS가 자식요소에 영향을 미친다.
+- flow(흐름)
+- 보통 요소가 쌓이는 형태 => Normal Flow
+
+##### Style
+- HTML/XML에 디자인을 씌우는 (표현을 입히는)
+
+##### Sheet
+- 명세서
+
+##### Style 작성시 고려해야하는 사항
+- 디자인으로 인해 HTML의 본연적 의미를 변경하지 마라.
+- 리팩토링 할 수 있는 여지가 있다고 생각하면 안된다.
+- 테스트 케이스, 예외상황, 모듈화
+- FontSize는 수정이 용이하도록 작성해야한다.
+
+##### 웹 폰트 고려해야하는 사항
+- IE6 이상 지원
+- 용량은 적당한가
+- 한글을 사용할경우 [Spoqa](https://spoqa.github.io/spoqa-han-sans/ko-KR/)를 고려해 볼 것
+- CSS내에서 @Import를 사용하는 방법보다 link에서 불러오는 방법이 빠르다.
+- FOUC방지코드 \<link rel="stylesheet" href="font주소">
+- e.g. \<link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/hanna.css">
+
+
+----
+
+#### Fonts
+
+- Feature
+  - 상속 === inherit === cascading
+  - 하위 요소 전체가 폰트를 상속
+  - input 요소 제외
+  - button 요소 제외
+  - textarea 요소 제외
+
+- Property
+  - Font
+    - font-family: 폰트의 집합
+    - font-size: 폰트의 크기
+    - line-height: 폰트의 행간
+    - letter-spacing: 폰트의 자간
+    - font-weight: 폰트의 굵기
+  - Text
+    - text-align: 정렬
+    - whitespace: 공백문자를 어떻게 처리 할지
+    - text-transform: 문자 변형, 대소문자
+    - text-overflow: 문자가 넘칠 경우
+    - line-clamp: 문자가 넘칠경우, 여러줄, 지원율 낮음
+
+
+- font-size
+  - pixel (px)
+    - 하나의 그래픽을 이루는 가장 작은 단위
+    - default font size: 16px;
+    - 맥, iOS의 기본 폰트는 APPLE SD Gothic NEO
+    - 디자인에서 20px => 10px (레티나)
+    - 맥, iOS에서는 11px로 설정해야 디자인 시안과 동일하게 나온다.
+  - em
+  - rem (root em)
+    - HTML 폰트 사이즈를 기준으로 계산
+    - 브라우저 지원율이 낮음 (IE11부터 지원)
+  - pt (point)
+    - 잘 사용하지 않음
+    -
+  - %
+    - 부모 요소를 기준으로 %값을 계산
+    - 100% = 부모요소의 폰트사이즈 = 16px
+    - 125% = 1.125 -- 16px을 기준으로 18px로 만드는 방법
+
+##### line-height
+
+- 폰트사이즈별/브라우저별 고려해주어야한다.
+- TODO
+
+##### font-family
+
+```css
+/* selector */ {
+  font-family: <family-name> <generic-name>;
+}
+```
+
+- <family-name>
+  - case insenstive
+
+- <generic-name>
+  - serif: 명조, 획이 있는 글꼴
+  - sans-serif: 고딕, 획이 없는 글꼴
+
+
+For Example:
+```css
+/**/ {
+  font-family: "APPLE SD Gothic NEO", sans-serif;
+  /*
+   * APPLE SD Gothic NEO 폰트가 있다면 사용해서 보여줌
+   * 아니라면 기본 고딕 폰트
+   * 리눅스/윈도우에서 봤을 때는 APPLE 폰트가 없기 떄문에 기본 고딕 폰트
+   */
+}
+```
+
+
+  <table style="display:none;">
+    <thead>
+      <th colspan="2"></th>
+      <th>폰트</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2">맥, iOS</td>
+        <td>APPLE SD Gothic NEO</td>
+      </tr>
+      <tr>
+        <td>안드로이드</td>
+        <td>Reference</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+##### letter-spacing
+
+Usage:
+```css
+/* selector */ {
+  letter-spacing: ;
+}
+```
+
+- 음수 가능 (-값 가능)
+- 서브픽셀(소수점) 가능 (IE제외)
+
+
+##### font-weight
+
+Usage:
+```css
+/* selector */ {
+  font-weight: <size>;
+}
+```
+
+- size
+  - 100~900 사이의 값
+  - 100: Thin (Hairline)
+  - 200: Extra Light (Ultra Light)
+  - 300: Light
+  - 400: Normal
+  - 500: Medium
+  - 600: Semi Bold (Demi Bold)
+  - 700: Bold
+  - 800: Extra Bold (Ultra Bold)
+  - 900: Black (Heavy)
+
+> 폰트별 지원하지않는 font-weight size가 존재한다.
+> 이 경우, 가장 가까운 숫자ㄹ에 맞게 size를 변경한다.
+> 100 ~ 500 = 400으로 변경
+> 600 ~ 900 = 700으로 변경
+
+
+
+##### text-align
+
+Usage:
+```css
+/* selector */ {
+  text-align: <size>;
+  /*
+   * <size>
+   *   center;
+   *   left;
+   *   right;
+   */
+}
+```
+
+```css
+/* 말 줄임을 하는 방법 Trick! */
+body {
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+```
+
+한국어는 justify-content를 지원되지 않는다. 지원율이 현저히 낮다.
 
 ----
 #### Reference
@@ -589,3 +785,5 @@ h1 {
 [SK 신현석:HTML5.1 변경사항](https://hyeonseok.com/soojung/webstandards/2017/01/28/808.html)
 [CSS 반복 체크:CSS-Purge](https://github.com/rbtech/css-purge)
 [만들어볼만한 페이지:더가디언](https://www.theguardian.com/international)
+[W3C 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항](https://www.w3.org/TR/2013/WD-klreq-20130514/korean/)
+[Google Fonts - Early Access](https://fonts.google.com/earlyaccess)
