@@ -777,6 +777,59 @@ body {
 
 한국어는 justify-content를 지원되지 않는다. 지원율이 현저히 낮다.
 
+
+### Box Model
+
+[자세한 내용](http://brunch.co.kr/@techhtml/21)
+
+#### Display
+
+- normal flow
+- 모든 요소는 기본적으로 쌓이는 구조 (위에서 아래로, 좌에서 우로)
+
+- block vs inline
+
+- block
+  - 블록 서식 문맥(block formatting context)
+  - 한줄을 다 차지함
+  - width,height를 설정하더라도 (자신이 가질 수 있는) 한 줄을 다 가짐
+  - 박스의 너비 = width + (padding-left, padding-right) + (border-left, border-right)
+  - 박스의 높이 = height + (padding-top, padding-bottom) + (border-top, border-bottom)
+
+  - margin은 너비,높이계산에 포함되지 않음
+- inline
+  - 인라인 서식 문맥(inline formatting context)
+  - 보여지는 것과 실제 크기가 다르다
+  - width 사용 불가
+  - 크기 계산 로직
+    - 비주얼 크기
+      - TOOD
+    - 실제 크기
+      - 너비: 콘텐츠 크기 + (padding-left, padding-right) + (border-left, border-right)
+      - 높이: line-height
+- inline-block
+  - 한줄을 다 차지하지 않음
+  - 텍스트와 동일하게 취급 하는데
+  - block처럼 width, height, padding 등을 계산 한다.
+  - inline에서 보여지는 것과 실제크기가 다를 때 실제크기에 맞출 수 있다.
+
+
+```css
+p {
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  /*  width 와 height 속성이 padding 및 border를 포함하며, margin을 포함하지 않는다. */
+}
+```
+
+
+#### Float
+
+> Float는 이미지를 왼쪽/오른쪽으로
+
+- Flaot된 요소의 높이는 부모가 알지못한다.
+
 ----
 #### Reference
 
