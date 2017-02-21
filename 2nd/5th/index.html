@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--
+      - IE 브라우저 모드
+      - 최신버전
+    -->
+    <link rel="stylesheet" href="style.css">
+    <title>Brunch 만들어보기</title>
+  </head>
+  <body>
+    <!-- Toggle UI -->
+    <!-- ad라는 클래스명은 광고임을 지칭 -->
+    <!-- 하지만 adblock이 ad라는 클래스명을 가진 광고를 막아버림 -->
+    <a href="#">
+      <!-- 펼쳐졌을 때와 펼쳐지지 않았을 때 링크가 동일하기 떄문에 크게 하나로 묶는 방법이 유지보수하기에 편하다. -->
+      <div class="ed">
+        <!-- 펼쳐졌을 때 -->
+        <img src="" alt="">
+        <!-- 펼쳐지지 않았을 때 -->
+        <img src="./images/ⓟ_brunchbook_banner_default_text_prize.png" alt="">
+      </div>
+    </a>
+
+    <!--
+      - header
+      - [방어코드] class에 "header"를 작성해놓는 것이 좋다. IE대응을 할 수도 있기때문에
+    -->
+    <header class="header">
+      <div class="logo-area">
+        <h1><a href="#">brunch</a></h1>
+        <a href="#">menu</a>
+        <!--
+          - 시각장애인은 h1인 brunch를 먼저보길 원할 것이다.
+          - 디자인상 menu>brunch 순이지만 css로 조정가능하다.
+
+          - 자바스크립트를 이용하는 링크처럼 생긴 요소를 어떻게 구현하면 좋을까요?
+          - 페이지 이동이 일어나지는 않으나 겉보기에 a요소인 것 같은 경우
+          - <button type="button"></button> 을 사용하는 것이 더 괜찮은 방법이다.
+          - [구버전] IE7 이하, 안드로이드 2.x ==> 10년전에 출시된...
+          - button에 css가 들어가지않는 현상이 발생한다.
+        -->
+      </div>
+      <div class="tool-area">
+        <a href="#" class="btn btn-normal">글쓰기</a>
+        <button type="button">검색</button>
+      </div>
+    </header>
+
+    <!--
+      - Side Navigation
+      - 클래스명은 side-menu 혹은 side-nav 등...
+    -->
+    <nav class="side-nav">
+      <h2>메뉴</h2>
+      <!--
+        - 접근성 측면에서 "메뉴"를 작성하는 것이 좋다.
+        - 로봇이 읽어갈 때 의미론적으로 분석하기 좋다.
+        - 언젠가 hidden 시키는 부분
+      -->
+      <div class="side-nav-header">
+        <a href="#" class="btn btn-primary">작가신청</a>
+        <!--
+          - 공통 디자인의 경우 클래스명을 부여할 떄 공통 모듈명을 작성하고
+          - 이후에 특성에 따라 분류를 세분화해서 클래스명을 부여한다.
+        -->
+      </div>
+      <!--
+        - header를 사용해도 된다.
+        - 헤딩을 포함할 때는 header를 사용하고 아닐떈 div로 한다.
+      -->
+      <div class="side-nav-contents">
+        <div class="menus">
+          <a href="#">페북으로 시작하기</a>
+          <a href="#">트위터로 시작하기</a>
+          <a href="#">카카오로 시작하기</a>
+        </div>
+        <div class="etc">
+          <input type="checkbox" name="login-status" id="login">
+          <!--
+            - id (identifier = 식별자)
+            - 같은 페이지에서 중복되어선 안돼
+          -->
+          <label for="login">로그인 상태 유지</label>
+          <!--
+            - label
+            - input은 label과 짝이다.
+            - label의 텍스트를 선택하면 체크상태가 변경된다.
+          -->
+          <a href="#">계정을 잊으셨나요?</a>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
+
+
+<!--
+  - 클래스 네이밍은 의미론적으로 다가가냐, 모듈로 다가가냐에 따라 다르다.
+  - div자체에 CSS를 작성하지말아라 div {}
+-->
