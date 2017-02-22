@@ -1,0 +1,66 @@
+/**
+ * CS
+ */
+
+ body {
+   font-family: 'Roboto', sans-serif;
+ }
+
+.text-right {
+  text-align: right;
+}
+.float-left {
+ float:left;
+}
+
+.float-right {
+ float:right;
+}
+
+.align-left {
+  float: left;
+  width: 300px;
+  padding: 30px;
+}
+.lst-menu li {
+  float: left;
+  /*
+   * list style
+   */
+  list-style: none;
+}
+.lst-menu li {
+  margin-right: 10px;
+}
+.lst-menu li:last-child {
+  margin-right: 0;
+}
+
+/*
+ * float된 요소의 높이를 알고 싶을 때 사용하는 CSS 테그닉
+ */
+.clearfix:after {
+  content: '';
+  display: block;
+
+   /*
+    * Clear
+    * Float된 요소의 높이를 알 수 있게 된다.
+    * 나는 더이상 float의 속박에서 벗어나고 싶다.
+    */
+  clear:both;
+}
+
+.image-left {
+  float:left;
+  width:300px;
+  margin: 20px;
+}
+.image-right {
+  float:right;
+  margin:20px;
+}
+
+.image-fit {
+  width: 100%;
+}

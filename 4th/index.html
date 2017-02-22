@@ -1,0 +1,292 @@
+<!--
+  - TheGuardian.com 만들어보기
+
+  - 구조
+    - 개인화 영역; GNB(Global Navigation Block)
+    - 로고 영역
+    - 네비게이션 영역
+
+  - Class Naming
+    - lst--menu lst__personalize
+      {리스트}--{모듈명}
+
+  - Tip!
+    - 어떤 요소를 사용해야할 지 모를 때, div를 사용한다.
+      div를 사용하면 다른 요소로 변경하기에 용이하다.
+    - 반복되는 요소는 Copy&Paste (Template Engine 사용하지않을 때)
+    - 구조를 잡을 때 한글로 주석을 써놓는 방법이 좋다. 나중에 클래스 네이밍 할 때 수월해진다.
+    - 실제 데이터가 없다면, Dummy Text(e.g. lorem lpsum)를 넣으면서 마크업 (http://lipsum.com)
+      - 한국어 페이지 만들 때는 한국어 lorem lpsum 사용
+    - div밑이나 li요소 밑에 P가없으면 익명으로 P요소가 있다고 인식한다.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- FOUC 방지 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <!-- 헤더 영역 -->
+    <header>
+      <!-- 개인화 영역 -->
+      <div class="clearfix">
+        <!-- 회원 등록, 후원, 구독 영역 -->
+        <div class="lst-menu float-left">
+          <ul>
+            <li><a href="#">sign in</a></li>
+            <li><a href="#">become a supporter</a></li>
+            <li><a href="#">subscribe</a></li>
+            <li><a href="#">search</a></li>
+          </ul>
+          <!--
+             // Bad
+             <div class="lst-menu">
+               <ul>
+                <li><h2>메뉴</h2></li>
+                <li>와퍼</li>
+                <li>맥주</li>
+               </ul>
+             </div>
+
+             // Good
+             <div class="lst-menu">
+               <h2>메뉴</h2>
+               <ul>
+                <li>와퍼</li>
+                <li>맥주</li>
+               </ul>
+             </div>
+
+          -->
+        </div>
+        <!-- 가디언지에 대한 정보 -->
+        <div class="lst-menu float-right">
+          <ul>
+            <li><a href="#">jobs</a></li>
+            <li><a href="#">dating</a></li>
+            <li><a href="#">more</a></li>
+            <li><a href="#">international</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- (큰) 로고 영역 -->
+      <div class="text-right">
+        <h1>
+          <a href="#">theguardian</a>
+          <!--
+            - a, anchor
+            - 닻, HTML에서 특정한 위치로 이동하기 위한 링크
+            - href 속성, 필수값 (Required)
+            - href 속성 값으로 #은 우선은 의미없는 링크
+          -->
+        </h1>
+        <!--
+          페이지 내에서 한 번만 사용하는 것을 권장.
+        -->
+      </div>
+      <!-- 네비게이션 영역 -->
+      <nav>
+        <ul class="lst-menu clearfix">
+          <li><a href="#">UK</a></li>
+          <li><a href="#">world</a></li>
+          <li><a href="#">sport</a></li>
+          <li><a href="#">football</a></li>
+          <li><a href="#">opinion</a></li>
+          <li><a href="#">culture</a></li>
+          <li><a href="#">business</a></li>
+          <li><a href="#">lifestyle</a></li>
+          <li><a href="#">fashion</a></li>
+          <li><a href="#">environment</a></li>
+        </ul>
+
+        <ol class="lst-menu">
+          <li><a href="#">home</a></li>
+          <li><a href="#">world</a></li>
+          <li><a href="#">US</a></li>
+        </ol>
+
+        <ul class="lst-menu clearfix">
+          <li><a href="#">americas</a></li>
+          <li><a href="#">asia</a></li>
+          <li><a href="#">australia</a></li>
+          <li><a href="#">africa</a></li>
+          <li><a href="#">middle east</a></li>
+          <li><a href="#">cities</a></li>
+          <li><a href="#">development</a></li>
+          <li><a href="#">europe</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--
+      컨텐츠 영역
+      - <main></main>보다는 <div class="contents"></div>로 작성하는 것이 더 올바른 선택이다.
+    -->
+    <div class="contents">
+      <!-- 메인 아티클 영역 -->
+      <main>
+        <article>
+          <h2>Trump security adviser Flynn quits after leaks suggest he tried to cover up Russia talks</h2>
+          <!--
+            - 상위에 h1이 선언 되어있기 때문에 h2로 선언
+          -->
+          <p>The departure of Trump’s national security adviser is the most dramatic development yet to hit the president’s chaotic administration</p>
+
+          <figure>
+            <!--
+              - figure
+              - 첨부 이미지에 가까움
+              - <figcaption></figcaption> 을 반드시 자식요소로 두어야한다.
+              - 자식,자손요소에 반드시 이미지가 있어야되는 것은 아니다.
+              - 중요: 본문의 내용과 연관성이 있어야 한다.
+              - TIP!
+                - figure로 작성하기 애매하면 div로 작성후 단계적인 리팩토링을 거치면서 수정한다.
+            -->
+            <img class="image-fit" src="https://i.guim.co.uk/img/media/eba28cd0c2efe417874cfb2a06db8f277bbe2035/0_177_3000_1801/master/3000.jpg?w=620&q=20&auto=format&usm=12&fit=max&dpr=2&s=191e7c0f40e8f151f4e7c15bbed5c39a" alt="">
+          <!--
+            - img (image)
+            - src 속성, 필수 (Required)
+              - 불러오는 이미지의 경로
+              - 확장자를 반드시 써주어야한다.
+            - alt 속성, 필수 (Required)
+              - Alternative Text
+              - 시각장애인들이 스크린리더로 페이지를 읽어들일 때 alt 속성에 있는 값을 읽어들입니다.
+              - 빈값으로라도 넣어야한다.
+              - 모종의 사유로 이미지를 불러오지 못한 경우에 대체텍스트가 보이게 된다.
+              - tooltip이 아니라 대체텍스트이다.
+
+            - 스크롤이 발생하면서까지 기본적인 사이즈를 보여주려한다.
+              width속성을 사용해서 조정가능하지만 css에서 조정하는 것을 권장한다.
+          -->
+            <figcaption>
+              <!--
+                - figure caption
+                - figcaption에 있는 내용이 명시적으로 이미지를 꾸며줌
+                - 이를 사용하는 경우 alt속성을 사용하지않는 것을 허용한다.
+              -->
+              Michael Flynn claimed in his resignation letter that he had mistakenly misled the vice-president about the nature of the phone calls to Russia. Photograph: Win McNamee/Getty Images
+            </figcaption>
+          </figure>
+
+          <p>The US national security advisor, Michael Flynn, resigned late on Monday night amid a flow of intelligence leaks that he had secretly discussed sanctions with the Russian ambassador to Washington and then tried to cover up the conversations.</p>
+
+          <p>The resignation, with the Trump era less than four weeks old, is the latest and most dramatic convulsion in the most chaotic start to an administration in modern US history.</p>
+
+          <img class="image-left" src="https://i.guim.co.uk/img/media/b5df38dbbb8d4c9758a44e050b618e74f709f019/0_277_5472_3285/master/5472.jpg?w=460&amp;q=55&amp;auto=format&amp;usm=12&amp;fit=max&amp;s=68524e095df9a51b739cba176c6b96df" alt="Donald Trump ...">
+
+          <p>It was far from clear whether Flynn’s departure would steady an inexperienced and feuding White House, or resolve the lingering suspicions about the Trump team’s pre-election contacts with the Kremlin.</p>
+
+          <p>The White House issued a statement just after 11pm in Washington announcing the resignation, shortly after reports broke that the Trump administration had been warned weeks ago that Flynn <a href="https://www.theguardian.com/us-news/2017/feb/13/donald-trump-white-house-michael-flynn-reince-preibus">might be vulnerable to Russian blackmail</a>.</p>
+
+          <p>The statement also named retired army general Joseph Kellogg, who goes by his middle name Keith, as acting national security advisor, pending the appointment of a permanent successor. It was reported that a third general, former CIA director, David Petraeus, was due to meet Trump on Tuesday.</p>
+
+          <p>But Petraeus has legal issues of his own. He is currently nearing the end of two years probation for sharing classified information with his biographer and lover, Paula Broadwell.</p>
+
+          <p>In his resignation letter, Flynn claimed he had mistakenly misled vice-president Mike Pence and other Trump officials about the nature of phone calls in December to the Russian ambassador, Sergei Kisilyak. When intelligence leaks about the communications began appearing last month, Pence and other White House officials insisted that the contact had only involved an exchange of Christmas greetings and arrangements for a future phone conversation between Trump and Vladimir Putin.</p>
+
+          <p>However, subsequent leaks suggested that they had been more substantial, and concerned sanctions the Obama administration was about to impose on Moscow for interference in the presidential elections. Intelligence officials claimed that Flynn had given the impression the sanctions might be lifted once the <a href="https://www.theguardian.com/us-news/trump-administration">Trump administration</a> came to office on 20 January.</p>
+
+          <img class="image-left" src="https://i.guim.co.uk/img/media/0f7fd01e134ec13c2cbd9781d8ede779ea099a54/0_191_3000_1800/master/3000.jpg?w=300&q=55&auto=format&usm=12&fit=max&s=c34475563a277e4da81ee63ed7e39e54" alt="Donald Trump ...">
+
+          <p>“In the course of my duties as the incoming national security advisor, I held numerous phone calls with foreign counterparts, ministers, and ambassadors,” Flynn said in his resignation letter. “These calls were to facilitate a smooth transition and begin to build the necessary relationships between the president, his advisors and foreign leaders. Such calls are standard practice in any transition of this magnitude.”</p>
+
+          <p>“Unfortunately, because of the fast pace of events, I inadvertently briefed the vice president elect and others with incomplete information regarding my phone calls with the Russian ambassador. I have sincerely apologized to the president and the vice president, and they have accepted my apology.”</p>
+
+          <p>Russian politicians offered a fierce defence of Flynn. Konstantin Kosachev, chairman of the foreign affairs committee at the upper chamber of the parliament, said in a Facebook post that firing a national security adviser for his contacts with Russia is “not just paranoia but something even worse”.</p>
+
+          <p>Kosachev’s counterpart at the lower chamber of the Russian parliament, Alexei Pushkov, tweeted shortly after the announcement that “it was not Flynn who was targeted but relations with Russia”.</p>
+
+          <figure>
+            <img class="image-fit" src="https://i.guim.co.uk/img/media/e1b369c372d9849680945223fb882fd7b827d81c/0_234_3500_2100/master/3500.jpg?w=620&q=20&auto=format&usm=12&fit=max&dpr=2&s=5d5c0ac2d2ef3043cb16a9f0ec7e23b1" alt="">
+            <figcaption>
+              Flynn is reportedly being investigated by the army for accepting money in late 2015 for a speaking engagement in Moscow. Photograph: Carlos Barria/Reuters
+            </figcaption>
+          </figure>
+
+          <p>On Monday afternoon, the White House appeared to struggle with how to handle the accusations. A White House statement that the president was “evaluating the situation” conflicted with White House counselor Kellyanne Conway telling reporters that Trump had “full confidence” in Flynn.</p>
+
+          <p>Flynn’s – and the Trump administration’s – problems run far deeper than the December phone calls with Kisilyak. The former Defense Intelligence Agency (DIA) chief is also reportedly being investigated by the army for accepting money in late 2015 for a speaking engagement in Moscow, which could have breached military rules. Furthermore, the repeated and detailed leaks by a disgruntled and alarmed US intelligence community suggested that Flynn’s contacts with Kisilyak dated back to before the election, raising more questions about whether the Trump campaign had any knowledge of the Russian effort to skew the elections.</p>
+
+          <div class="image-left">
+            <p>Mike Flynn might be done – but Trump's nightmare has just begun</p>
+            <p>Richard Wolffe</p>
+            <p>Richard Wolffe  Read more</p>
+            <img src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/contributor/2016/1/18/1453113486254/Richard-Wolffe-L.png?w=173&q=55&auto=format&usm=12&fit=max&s=1ed6c37ddac43901c9659e833d9d8b4d" alt="">
+          </div>
+
+          <p>A handful of intelligence agencies are looking into those suspicions, as are four separate congressional committees. Adam Schiff, the ranking Democrat on one of those panels, the House intelligence committee, demanded to know when contacts with Russian officials started and how far up the Trump chain of command did responsibility for those contact rest.</p>
+
+          <p>Schiff said: “The Trump administration has yet to be forthcoming about who was aware of Flynn’s conversations with the ambassador and whether he was acting on the instructions of the president or any other officials, or with their knowledge.”</p>
+
+          <div class="image-right">
+            <p>Advertisement</p>
+            <img src="https://tpc.googlesyndication.com/simgad/5469943243924262774" alt="">
+          </div>
+
+
+          <p>At the time of his departure, Flynn appeared to have been losing a power struggle inside the White House in which the established institution and processes of the national security council (NSC) were being sidestepped by a small group of Trump advisors, led by Steve Bannon, Trump’s chief strategist and former head of Breitbart News, which has been a platform for the far right.</p>
+
+          <p>Alongside him are Stephen Miller, another rightwing ideologue, and Jared Kushner, the president’s son-in-law and adviser. They have set up the Strategic Initiatives Group, a parallel institution to the national security council inside the White House, which produces policies, in the form of quick-fire executive orders and memoranda, without consultation with the staff experts on the NSC.</p>
+
+          <p>Ignored at best, berated at worst, the NSC career staff began leaking copiously about Trump’s erratic phone calls with other world leaders and other missteps, infuriating the president, who ordered leak investigations, further deepening the discontent and dysfunction inside the White House. Any successor to Flynn would face the same struggle for influence and the president’s ear as he did.</p>
+
+
+          <div>
+            <p>Since you’re here …</p>
+            <p>… we’ve got a small favour to ask. More people are reading the Guardian than ever, but far fewer are paying for it. And advertising revenues across the media are falling fast. So you can see why we need to ask for your help. The Guardian’s independent, investigative journalism, informed by our values, takes a lot of time, money and hard work to produce. But we do it because we believe in the power of truthful, in-depth reporting, especially in the face of fake news and ‘alternative facts.’</p>
+
+            <p>If everyone who reads our reporting, who likes it, helps to pay for it, our future would be much more secure.</p>
+
+            <a href="#">Become a Supporter</a>
+            <a href="#">Make a contribution</a>
+          </div>
+        </article>
+      </main>
+
+      <!-- 사이드 영역 -->
+      <div>
+        <h3>more on this story</h3>
+        <div>
+          <img src="" alt="">
+          <a href="#">Kremlin says Michael Flynn resignation is matter for the US</a>
+        </div>
+
+        <div>
+          <img src="" alt="">
+          <a href="#">Donald Trump had 'full confidence' in Mike Flynn – hours later he was gone</a>
+        </div>
+
+        <div>
+          <img src="" alt="">
+          <a href="#">Keith Kellogg: who is Trump's acting national security adviser?</a>
+        </div>
+
+        <div>
+          <img src="" alt="">
+          <a href="#">Mike Flynn might be done – but Trump's nightmare has just begun
+Richard Wolffe</a>
+        </div>
+      </div>
+      <!-- 관련 영역 -->
+      <div></div>
+      <!-- 다른 기사 영역 -->
+      <div></div>
+      <!-- 사이드 영역 -->
+      <div></div>
+
+    </div>
+
+    <footer>
+      <!-- (작은) 로고 영역 -->
+      <div></div>
+      <!-- 네비게이션 영역 -->
+      <div></div>
+      <!-- 사이트맵 영역 -->
+      <div></div>
+    </footer>
+  </body>
+</html>
