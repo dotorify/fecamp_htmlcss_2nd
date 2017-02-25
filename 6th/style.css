@@ -1,0 +1,34 @@
+
+/*
+ * CSS 변수
+ * IE 빼고 다 지원
+ * 모바일만 지원해야하는 경우 지원율이 높으니 사용해도 무방
+ * 모바일과 PC둘다 지원해야하는 경우라면 고려하거나 다른 방법 사용
+ */
+:root {
+  --heading-font-size: 36px;
+  --subheading-font-size: 28px;
+}
+
+main {}
+main h2 {
+  font-size: var(--heading-font-size);
+  margin: 0;
+}
+main p {
+  font-size: var(--subheading-font-size);
+  margin: 0;
+}
+main h3 {
+  /* display: none; 검색엔진은 긁어가지만 스크린리더에서는 읽지못해 이점을 얻을 수 없음. */
+  position: absolute;
+  left: -100%;
+}
+main .carousel {}
+main .carousel .panel {}
+main ul {}
+main ul li {}
+main ul li a {}
+main ul li a dl {}
+main ul li a dl dt {}
+main ul li a dl dd {}

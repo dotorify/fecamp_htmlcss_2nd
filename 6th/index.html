@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Brunch</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    - Brunch 나머지
+  -->
+
+  <main>
+    <h2>글이 작품이 되는 공간 브런치</h2>
+    <!--
+      - h1 ~ h6
+    -->
+    <p>브런치에 담긴 아름다운 작품을 감상해 보세요.<br>
+      그리고 다시 꺼내 보세요.<br>
+    서랍 속 간직하고 있는 글과 감성을.</p>
+    <!--
+      - br (break)
+      - 일반적으로 많이 사용하지는 않으나 에디터류에서는 자주 쓰임. (e.g. 브런치 에디터 등)
+    -->
+
+    <h3>에디터의 추천</h3>
+    <!--
+      - 제목요소를 넣음으로써 많은 이점을 얻을 수 있다.
+      - 스크린리더, 접근성을 고려한..
+    -->
+
+    <div class="carousel">
+      <div class="panel">
+        <ul>
+          <li>
+            <a href="#">
+              <!--
+                - HTML5에서는 Achor내에 다른 요소를 사용을해도 되지만
+                - HTML4에서는 권장하지 않는다.
+              -->
+              <dl>
+                <dt>다른 나라에서 이방인으로 사는 삶</dt>
+                <dd>영글음</dd>
+              </dl>
+              <!--
+                - dl (definition list, 정의 목록)
+                - dt (definition title, definition target, 정의 제목)
+                = dd (definition description, 정의 설명)
+                - HTML5에서는 dl과 dt를 name과 value로 사용할 수 있다.
+              -->
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <dl>
+                <dt>다른 나라에서 이방인으로 사는 삶</dt>
+                <dd>영글음</dd>
+              </dl>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--
+      - 일반적으로 좌우이동하는 회전목마같은 UI를 캐러셀UI라고 많이 부른다.
+    -->
+  </main>
+</body>
+</html>
