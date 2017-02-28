@@ -19,7 +19,11 @@
 
     <div class="search-box">
       <label for="search" class="blind">검색창</label>
-      <input id="search" type="text">
+      <input id="search" type="text" title="검색어 입력">
+      <!--
+        - input에서도 title 속성을 사용할 수 있다.
+        - https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title
+      -->
     </div>
 
     <a href="#" class="personal-menu">
@@ -74,9 +78,10 @@
       </div>
     </div>
 
-    <nav class="main-nav">
-      <h2>네비게이션 메뉴</h2>
-      <ul>
+    <nav class="main-menu">
+      <h2 class="blind">네비게이션 메뉴</h2>
+
+      <ul class="category-list">
         <li>
           <a href="#">뉴스</a>
         </li>
@@ -87,10 +92,10 @@
           <a href="#">스포츠</a>
         </li>
         <li>
-          <a href="#">웹툰.뿜</a>
+          <a href="#">웹툰, 뿜</a>
         </li>
         <li>
-          <a href="#">푸드</a>
+          <a href="#">차,테크</a>
         </li>
         <li>
           <a href="#">쇼핑</a>
@@ -98,19 +103,28 @@
         <li>
           <a href="#">동영상</a>
         </li>
-        <li>
-          <a href="#">차.테크</a>
+        <li class="selected">
+          <a href="#">푸드</a>
         </li>
       </ul>
+      <div class="gradient gradient-left">
+      </div>
+      <div class="gradient gradient-right">
+      </div>
+      <button type="button"></button>
+      <div>
+        <h3 class="blind">주제 바로가기</h3>
+      </div>
+
     </nav>
   </header>
   <!-- //Header -->
 
   <!-- Content -->
   <main class="main">
-    <h2>뉴스</h2>
-    <div>
-      <h3>헤드라인과 실시간 검색어</h3>
+    <h2 class="blind">푸드</h2>
+    <div class="card">
+      <h3>혼밥 레시피</h3>
       <!--
       <ul>
         <li>
@@ -131,44 +145,10 @@
       </ul>
     -->
     </div>
-
-    <div>
-      <h3>실시간 검색어</h3>
-      <div class="runtime-search-highlight">
-      </div>
+    <div class="card">
+      <h3>BEST</h3>
     </div>
 
-    <div>
-      <h3>날씨</h3>
-    </div>
-
-    <div>
-      <h3>스토리 뉴스</h3>
-    </div>
-
-    <div>
-      <h3>헬로! 아티스트</h3>
-    </div>
-
-    <div>
-      <h3>오늘의 단어</h3>
-    </div>
-
-    <div>
-      <h3>토요일 강연</h3>
-    </div>
-
-    <div>
-      <h3>남녀별 더 많이 본 뉴스</h3>
-    </div>
-
-    <div>
-      <h3>연재로 읽는 세상</h3>
-    </div>
-
-    <div>
-      <h3>많이 본 뉴스</h3>
-    </div>
   </main>
   <!-- //Content -->
 
