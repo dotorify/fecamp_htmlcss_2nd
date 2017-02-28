@@ -4,7 +4,9 @@ body {
 
 .header {
   background: #00c73c;
-  padding: 15px;
+}
+.header-wrap {
+  padding:15px 15px 0;
 }
 .header .logo-area {
   display: flex;
@@ -45,10 +47,6 @@ body {
    * 그 속성을 사용하지 않도록 하는 코드이다.
    */
    -webkit-apperance: none;
-   /* image Replacement(IR) 기법 */
-   /*text-indent: -9999px;*/
-   /*  */
-
    color: inherit;
 }
 
@@ -100,4 +98,49 @@ Naver의 sp_main.png를 사용했을 때
 }
 
 */
-.header .nav-area {}
+
+.header .input-area {}
+.header .input-area .inp-search {
+  display: block;
+  width: 100%;
+  padding: 8px 15px 5px;
+  margin: 15px 0;
+  /* input 초기화 코드 - fonts 관련 */
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+  /* iOS 대응 */
+  -webkit-apperance: none;
+  border: 1px solid #ddd; /* 또는 0 (모바일에는 보더 줘야함.) */
+  border-radius: 0; /* iOS는 기본적으로 가느다란 radius가 있기떄문 */
+}
+
+
+.header .nav-area {
+  display: flex; /* 레이아웃이 깨지지않도록 하려한다. */
+  background: #fff;
+  border-bottom:1px solid #ddd;
+}
+.header .nav-area ul {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+}
+.header .nav-area a {
+  min-width: 70px;
+  display: block;
+  padding: 8px 10px 5px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+.header .nav-area .btn-nav {
+  border-left:1px solid #ddd
+}
+.header .nav-area ul,
+.header .nav-area li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}

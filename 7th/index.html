@@ -3,20 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    - 접근성 측면에서 user-scaleable=no 사용은 위배된다.
+    - zoom이벤트도 먹지않는다. 여러가지 버그를 야기한다.
+    - ios safari 9.2~10.2사이에 발생하는 input태그 focus시 확대되는걸 막는 방법....
+  -->
   <title>네이버</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
-    <div class="logo-area">
-      <h1>NAVER</h1>
-      <button type='button' class='btn-hamburger'><i class="material-icons">menu</i></button>
-      <button type='button' class='btn-setHome'><i class="material-icons">home</i></button>
+    <div class="header-wrap">
+      <div class="logo-area">
+        <h1>NAVER</h1>
+        <button type="button" class="btn-hamburger"><i class="material-icons">menu</i></button>
+        <button type="button" class="btn-setHome"><i class="material-icons">home</i></button>
+      </div>
+      <div class="input-area">
+        <input class="inp-search">
+      </div>
     </div>
-    <div class="input-area">
-      <input class="inp-search">
-    </div>
+
     <nav class="nav-area">
       <ul>
         <li><a href="#">뉴스</a></li>
@@ -27,12 +35,12 @@
         <li><a href="#">쇼핑</a></li>
         <li><a href="#">동영상</a></li>
       </ul>
-      <button type="button">네비게이션 펼치기</button>
+      <button type="button" class="btn-nav"><i class="material-icons">keyboard_arrow_down</i></button>
     </nav>
   </header>
   <main>
     <div class="video-container">
-      <img src="" alt="">
+      <img src="http://" alt="">
       <dl>
         <dt>MBC X 네이버 TV &lt;생동성 연예&gt; 15회</dt>
         <dd>서로의 진심은 모른 채 결국 엇갈려버린 인연</dd>
@@ -56,7 +64,7 @@
                 <span>순위:</span><strong>1</strong>
                 <span>1<span>위 상승</span></span>
               </span>
-              <img src="" alt="">
+              <img src="http://" alt="">
               <p>"인간 계산기" 블락비 박경의 IQ 156 활용법, 모든 것을 눈으로 계산</p>
             </a>
           </li>
@@ -66,7 +74,7 @@
                 <span>순위:</span><strong>2</strong>
                 <span>1<span>위 상승</span></span>
               </span>
-              <img src="" alt="">
+              <img src="http://" alt="">
               <p>"인간 계산기" 블락비 박경의 IQ 156 활용법, 모든 것을 눈으로 계산</p>
             </a>
           </li>
@@ -76,7 +84,7 @@
                 <span>순위:</span><strong>3</strong>
                 <span>1<span>위 상승</span></span>
               </span>
-              <img src="" alt="">
+              <img src="http://" alt="">
               <p>"인간 계산기" 블락비 박경의 IQ 156 활용법, 모든 것을 눈으로 계산</p>
             </a>
           </li>
@@ -86,7 +94,7 @@
                 <span>순위:</span><strong>4</strong>
                 <span>1<span>위 상승</span></span>
               </span>
-              <img src="" alt="">
+              <img src="http://" alt="">
               <p>"인간 계산기" 블락비 박경의 IQ 156 활용법, 모든 것을 눈으로 계산</p>
             </a>
           </li>
@@ -96,7 +104,7 @@
                 <span>순위:</span><strong>5</strong>
                 <span>1<span>위 상승</span></span>
               </span>
-              <img src="" alt="">
+              <img src="http://" alt="">
               <p>"인간 계산기" 블락비 박경의 IQ 156 활용법, 모든 것을 눈으로 계산</p>
             </a>
           </li>
@@ -113,7 +121,7 @@
       <ul>
         <li>
           <a href="#">
-            <img src="" alt="">
+            <img src="http://" alt="">
             <p>
               <span class="program-name">피고인</span>
               지성 신린아에 "미안해 아빠가 늦었지"
@@ -122,7 +130,7 @@
         </li>
         <li>
           <a href="#">
-            <img src="" alt="">
+            <img src="http://" alt="">
             <p>
               <span class="program-name">피고인</span>
               지성 신린아에 "미안해 아빠가 늦었지"
@@ -131,7 +139,7 @@
         </li>
         <li>
           <a href="#">
-            <img src="" alt="">
+            <img src="http://" alt="">
             <p>
               <span class="program-name">피고인</span>
               지성 신린아에 "미안해 아빠가 늦었지"
@@ -140,7 +148,7 @@
         </li>
         <li>
           <a href="#">
-            <img src="" alt="">
+            <img src="http://" alt="">
             <p>
               <span class="program-name">피고인</span>
               지성 신린아에 "미안해 아빠가 늦었지"
@@ -155,32 +163,32 @@
       <ul>
         <li>
           <a href="#">
-            <img src="" alt=""> 고등래퍼
+            <img src="http://" alt=""> 고등래퍼
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="" alt=""> 고등래퍼
+            <img src="http://" alt=""> 고등래퍼
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="" alt=""> 고등래퍼
+            <img src="http://" alt=""> 고등래퍼
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="" alt=""> 고등래퍼
+            <img src="http://" alt=""> 고등래퍼
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="" alt=""> 고등래퍼
+            <img src="http://" alt=""> 고등래퍼
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="" alt=""> 고등래퍼
+            <img src="http://" alt=""> 고등래퍼
           </a>
         </li>
       </ul>
@@ -197,7 +205,7 @@
       </ul>
     </section>
     <div class="video-container">
-      <img src="" alt="">
+      <img src="http://" alt="">
       <dl>
         <dt>MBC X 네이버 TV &lt;생동성 연예&gt; 15회</dt>
         <dd>서로의 진심은 모른 채 결국 엇갈려버린 인연</dd>
