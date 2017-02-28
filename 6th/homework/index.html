@@ -5,148 +5,1181 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>NAVER</title>
   <!-- Stylesheet: Normalize -->
+  <!--
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="style.css">
+  -->
+  <style>
 
+  </style>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
+    <!-- Logo -->
     <a href="#" class="logo">
       <h1 class="blind">NAVER</h1>
-      <img src="images/logo.png" alt="NAVER" width="200px" height="48px">
+      <img src="http://placehold.it/200x48" alt="Naver Logo">
     </a>
+    <!-- //Logo -->
 
+    <!-- Search Box -->
     <div class="search-box">
       <label for="search" class="blind">검색창</label>
-      <input id="search" type="text" title="검색어 입력">
+      <input type="text" id="search" name="search" title="검색어 입력">
       <!--
+        - <label> 요소, title 속성 사용을 통해 스크린 리더 사용자는 주변 맥락에 대한 이해없이 각 요소에 독립적으로 접근해도 폼을 이해 할 수 있다.
         - input에서도 title 속성을 사용할 수 있다.
         - https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title
       -->
     </div>
+    <!-- //Search Box -->
 
+    <!-- Personal Menu -->
     <a href="#" class="personal-menu">
-      <h2 class="blind">개인화메뉴</h2>
+      <h2 class="blind">개인화 영역 열기</h2>
     </a>
+    <!-- //Personal Menu -->
+
+    <!-- Home Setting Menu -->
     <a href="#" class="homesetting-menu">
-      <h2 class="blind">홈설정메뉴</h2>
+      <h2 class="blind">메뉴 순서 변경하기</h2>
     </a>
+    <!-- //Home Setting Menu -->
 
-    <!-- Search Area -->
-    <div class="search-area">
-
-      <div class="search-detail-area">
-        <div class="latest-search-list">
-          <h2>최근 검색어 내역</h2>
-          <p>
-            <span>최근 검색어 내역이 없습니다.</span><br>
-            <span>설정이 초기화 된다면 <a href="#">도움말</a>을 확인해주세요.</span>
-          </p>
-        </div>
-        <div class="suggest-list">
-          <h2>검색어 제안 내역</h2>
-        </div>
-        <div class="tool-list">
-            <button type="button">자동저장 끄기</button>
-            <button type="button">도움말</button>
-            <button type="button">닫기</button>
-        </div>
-      </div>
-
-      <div class="advanced-area">
-        <ul>
-          <li>
-            <a href="#">음성</a>
-          </li>
-          <li>
-            <a href="#">음악</a>
-          </li>
-          <li>
-            <a href="#">코드</a>
-          </li>
-          <li>
-            <a href="#">와인</a>
-          </li>
-          <li>
-            <a href="#">일본어</a>
-          </li>
-          <li>
-            <a href="#">한자</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <nav class="main-menu">
+    <!-- Navigation -->
+    <nav class="nav">
       <h2 class="blind">네비게이션 메뉴</h2>
 
-      <ul class="category-list">
-        <li>
-          <a href="#">뉴스</a>
-        </li>
-        <li>
-          <a href="#">연예</a>
-        </li>
-        <li>
-          <a href="#">스포츠</a>
-        </li>
-        <li>
-          <a href="#">웹툰, 뿜</a>
-        </li>
-        <li>
-          <a href="#">차,테크</a>
-        </li>
-        <li>
-          <a href="#">쇼핑</a>
-        </li>
-        <li>
-          <a href="#">동영상</a>
-        </li>
-        <li class="selected">
-          <a href="#">푸드</a>
-        </li>
-      </ul>
-      <div class="gradient gradient-left">
-      </div>
-      <div class="gradient gradient-right">
-      </div>
-      <button type="button"></button>
+      <!-- Subject List -->
       <div>
-        <h3 class="blind">주제 바로가기</h3>
+        <h3 class="blind">주제 목록</h3>
+        <ul class="subject-list">
+          <li>
+            <a href="#">뉴스</a>
+          </li>
+          <li>
+            <a href="#">연예</a>
+          </li>
+          <li>
+            <a href="#">스포츠</a>
+          </li>
+          <li>
+            <a href="#">웹툰, 뿜</a>
+          </li>
+          <li>
+            <a href="#">차,테크</a>
+          </li>
+          <li>
+            <a href="#">쇼핑</a>
+          </li>
+          <li>
+            <a href="#">동영상</a>
+          </li>
+          <li class="selected">
+            <a href="#">푸드</a>
+          </li>
+        </ul>
+        <div class="gradient gradient-left"></div>
+        <div class="gradient gradient-right"></div>
       </div>
+      <!-- //Subject List -->
+
+      <!-- Toggle Button -->
+      <button type="button" class="btn btn-toggle">바로가기 열기</button>
+      <!-- //Toggle Button -->
 
     </nav>
+    <!-- //Navigation -->
+
   </header>
   <!-- //Header -->
 
   <!-- Content -->
   <main class="main">
     <h2 class="blind">푸드</h2>
+
+    <!-- 1st card -->
     <div class="card">
-      <h3>혼밥 레시피</h3>
-      <!--
+      <h3>푸드 레시피</h3>
+      <span>트렌드와 상식</span>
+
       <ul>
         <li>
-          <a href="#">"마지막 날까지 수사"... 막판 스퍼트 특검, 관련자 줄소환</a>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/245x160" alt="">
+              <figurecaption>항공사별 기내 주류 서비스를 소개합니다</figurecaption>
+            </figure>
+          </a>
         </li>
         <li>
-          <a href="#">정부, 외교무대서 北생화학무기 위협 전면 쟁점화</a>
-        </li>
-        <li>
-          <a href="#">대통령측 "9인체제 아니면 재심사유"…헌재 "7인 이상 심리.."</a>
-        </li>
-        <li>
-          <a href="#">탄핵심판 임박…촛불 vs 태극기 '총동원령'</a>
-        </li>
-        <li>
-          <a href="#">전국 기온 오르며 '포근한 오후' 곳곳 미세먼지↑</a>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/245x160" alt="">
+              <figurecaption>사과 외에도! 당뇨병 환자들도 먹을 수 있는 과일 6</figurecaption>
+            </figure>
+          </a>
         </li>
       </ul>
-    -->
     </div>
+    <!-- //1st card -->
+
+    <!-- 2nd card -->
     <div class="card">
-      <h3>BEST</h3>
+      <h3></h3>
+      <ul>
+        <li>
+          <a href="#">
+            <span>편의점 라면 추천!</span>
+            <span>여러 편의점들의 PB 컵라면</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>간편하고 맛있는</span>
+            <span>지금은 '덮밥' 전성시대</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>식욕을 꽉 잡아주는</span>
+            <span>'와일드 망고'는 무엇일까?</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //2nd card -->
+
+    <!-- 3rd card -->
+    <div class="card">
+      <h3>Best</h3>
+      <span>많이 본 콘텐츠</span>
+      <ul>
+        <li>
+          <a href="#">
+            <span>1</span>
+            <figure>
+              <img src="http://placehold.it/105x105" alt="">
+              <figurecaption>매일 먹는 두부에 파채를 더해요</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>2</span>
+            <figure>
+              <img src="http://placehold.it/105x105" alt="">
+              <figurecaption>뜨거운 해방촌, 인기를 누리는 곳 5</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>3</span>
+            <figure>
+              <img src="http://placehold.it/105x105" alt="">
+              <figurecaption>한 입 쏙~ 자색고구마 토르티아 롤</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>4</span>
+            <figure>
+              <img src="http://placehold.it/105x105" alt="">
+              <figurecaption>고소해서 아이들도 잘 먹는 '밥전'</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>5</span>
+            <figure>
+              <img src="http://placehold.it/105x105" alt="">
+              <figurecaption>비린내 없이 굴 먹는 꿀팁</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //3rd card -->
+
+    <!-- 4rd card -->
+    <div class="card">
+      <h3>요리 Tip</h3>
+      <span>재료 손질부터 보관까지</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/245x160" alt="">
+              <figurecaption>활용하기 좋은 양파 가루 간단하게 만드는 꿀팁</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/245x160" alt="">
+              <figurecaption>다른 도구 필요 없어요~ 밥 숟가락 계량법</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <span>달달한 맛의 새조개</span>
+            <span>쉽게 손질하는 방법</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>후숙 과일인 키위</span>
+            <span>빨리 익혀 달콤하게 먹으려면?</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>빨리 익지 않는 무</span>
+            <span>조림용으로 미리 만들어 두기</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //4rd card -->
+
+    <!-- 5th card -->
+    <div class="card card-bd">
+      <h3 class="blind">광고</h3>
+      <!--
+        - bd의 의미는 'advertisement'.
+        - ad로 하면 걸러내어질 수 도 있음. 광고주가 화남..
+      -->
+      <img src="http://placehold.it/320x60" alt="">
+    </div>
+    <!-- //5th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>오늘의 리빙 꿀팁</h3>
+      <span>궁금하다면 클릭!</span>
+
+      <a href="#">리빙 보기</a>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>그릇 정리정돈 하는 날</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>오래된 책장, 수납장으로 변신</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>남은 귤껍질로 프라이팬 닦기</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>느타리버섯</h3>
+      <span>건강함이 한가득 느껴져요</span>
+
+      <img src="http://placehold.it/45x45" alt="author">
+
+      <a href="#">
+        <img src="http://placehold.it/640x300" alt="" width="100%">
+      </a>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>해시태그 모음</h3>
+
+      <ul>
+        <li>
+          <a href="#">#봄동 요리</a>
+        </li>
+        <li>
+          <a href="#">#닭가슴살 요리</a>
+        </li>
+        <li>
+          <a href="#">#통조림 요리</a>
+        </li>
+        <li>
+          <a href="#">#찌개 레시피</a>
+        </li>
+        <li>
+          <a href="#">#볶음 요리</a>
+        </li>
+        <li>
+          <a href="#">#계란찜 만드는법</a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- 6th card -->
+    <div class="card">
+      <h3>혼밥 레시피</h3>
+      <span>나를 위한 따뜻한 한 끼</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>실패 없이 누구나 맛있게 만들어 먹는 '참치 마요'</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>김장김치 넣어 얼큰하게 끊인 초간단 어묵우동</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>
+                <span>삼겹살이 애매하게 남았을 때!</span>
+                <span>고급 고깃집표 깍두기 볶음밥</span>
+                <span>대학내일</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>
+                <span>상큼한 망고살사 소스를 만나</span>
+                <span>근사하게 변신한 맛살요리</span>
+                <span>동원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //6th card -->
+
+    <!-- 7th card -->
+    <div class="card">
+      <h3>마시멜로우</h3>
+      <span>달콤한 유혹 '마시멜로우'</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>따라해보면 어렵지 않아요~ 직접 만드는 마시멜로우</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>아이들 입맛, 취향 저격! 간식으로 좋은 '스모어 딥'</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //7th card -->
+
+    <!-- 8th card -->
+    <div class="card">
+      <h3>피플</h3>
+      <span>좋은 먹거리를 만드는 사람들</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>'시골 와서 사장됐어요' 퇴직 교사 부부의 귀농.귀촌기</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>원재료 맛 살리고 트렌드 접목 '새 딤섬 개발은 나와의 싸움'</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //8th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>#맛집</h3>
+      <span>나만 알고 싶은 그곳</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>
+                <span>진짜 꽃은 아니지만</span>
+                <span>향기가 나는듯, 플라워 떡 케이크</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>
+                <span>봄맞이 먹방</span>
+                <span>3월에 가 볼만한 주전부리 여행지 7</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x80" alt="">
+              <figurecaption>이국적인 '샤로수길' 투어 지하철 타고 서울대입구역으로</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x160" alt="">
+              <figurecaption>국수 좋아하시나요? 서울에서 3가지 아시아 국수 맛보기</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>푸드윈도</h3>
+      <span>신선한 재료와 지역명물이 한곳에</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x120" alt="">
+              <figurecaption>
+                <span>5포 추가증정 속 편한 알로에겔</span>
+                <span class="price">47,900원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x120" alt="">
+              <figurecaption>
+                <span>생강향이 솔솔 서산 생강한과</span>
+                <span class="price">20,000원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x120" alt="">
+              <figurecaption>
+                <span>밥이 쓱쓱~ 비비는 곤드레</span>
+                <span class="price">14,000원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x80" alt="">
+              <figurecaption>
+                <span>햇출하! 하우스 재배로 달아요! 껍질째 먹는 제주 금귤</span>
+                <span class="price">5kg 19,900원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x80" alt="">
+              <figurecaption>
+                <span>일 년 만에 돌아온 부산의 명물 대저 토마토</span>
+                <span class="price">3kg 15,900원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/120x80" alt="">
+              <figurecaption>
+                <span>맛있다고 칭찬이 자자한 병천 순대</span>
+                <span class="price">1kg 8,900원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>N쇼핑</h3>
+      <span>실패 없는 간편식 득템 찬스!</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/105x75" alt="">
+              <figurecaption>
+                <span>요리하는 즐거움 쿠킹박스</span>
+                <span class="price">기획전</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/105x75" alt="">
+              <figurecaption>
+                <span>담백하고 고소한 크림 홍합스튜</span>
+                <span class="price">18,000원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/105x75" alt="">
+              <figurecaption>
+                <span>35년 전통 통나무 집닭갈비</span>
+                <span class="price">20,000원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/105x75" alt="">
+              <figurecaption>
+                <span>매운 감칠맛 오동통쭈꾸미</span>
+                <span class="price">12,000원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/105x75" alt="">
+              <figurecaption>
+                <span>중국 사천 탄탄면을 집에서</span>
+                <span class="price">13,600원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/105x75" alt="">
+              <figurecaption>
+                <span>생선살 가득! 양어장집메기조림</span>
+                <span class="price">28,000원</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>매거진</h3>
+
+      <a href="">매거진 더보기</a>
+
+      <ul>
+        <li>
+          <a>
+            <img src="http://placehold.it/30x30" alt="">
+            <span>이밥차</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/30x30" alt="">
+            <span>브레드가든</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/30x30" alt="">
+            <span>더라이트</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/30x30" alt="">
+            <span>쿠켄</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/30x30" alt="">
+            <span>라 퀴진</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/30x30" alt="">
+            <span>Begun</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>신간도서</h3>
+      <span>따끈따끈</span>
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/87x120" alt="">
+              <figurecaption>
+                <span class="title">브런치</span>
+                <span class="author">정성숙</span>
+                <span class="publisher">라임북스</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/87x120" alt="">
+              <figurecaption>
+                <span class="title">아이와 함께 간단 베이킹</span>
+                <span class="author">마치노 키미히</span>
+                <span class="publisher">스타일조선</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/87x120" alt="">
+              <figurecaption>
+                <span class="title">라루스 파티시에</span>
+                <span class="author">라쿠스</span>
+                <span class="publisher">그린쿡</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/87x120" alt="">
+              <figurecaption>
+                <span class="title">알폰소의 파스타 공작소</span>
+                <span class="author">노순배</span>
+                <span class="publisher">책과나무</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>추천 포스트</h3>
+
+      <a href="#">구독 포스트 보기</a>
+
+      <ul>
+        <li>
+          <a>
+            <img src="http://placehold.it/36x36" alt="프로필 사진">
+            <span>영빵</span>
+            <span>포스트</span>
+            <span>10,442</span>
+          </a>
+          <button type="button" title="구독">구독</button>
+
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>밑반찬종류 영빵의 겨울 밑반찬 10가지 레시피 모음!</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>콩나물국 끓이는법 김치를 넣어 더욱 시원칼칼</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>봄동된장국 끓이는법! 밥이 술술 넘어가요~</figurecaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/36x36" alt="프로필 사진">
+            <span>상휘맘나희주</span>
+            <span>포스트</span>
+            <span>11,563</span>
+          </a>
+          <button type="button" title="구독">구독</button>
+
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>해장라면 라면 맛있게 끓이는 법</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>치즈 듬뿍 국물떡볶이 황금레시피~</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>새우 듬뿍 로제크림파스타만들기~ 로제스파게티</figurecaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/36x36" alt="프로필 사진">
+            <span>그녀의 요리</span>
+            <span>포스트</span>
+            <span>18,274</span>
+          </a>
+          <button type="button" title="구독">구독</button>
+
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>바크초콜릿만들기-영상레시피</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>맛있고 간단한 계란샌드위치 만들기- 영상레시피</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>노오븐베이킹) 딸기 치즈케이크만들기- 영상레시피</figurecaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a>
+            <img src="http://placehold.it/36x36" alt="프로필 사진">
+            <span>봉스</span>
+            <span>포스트</span>
+            <span>22,470</span>
+          </a>
+          <button type="button" title="구독">구독</button>
+
+          <ul>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>전복미역국, 미역국 맛있게 끓이는 법</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>메추리알장조림 황금레시피, 메추리알삶는법</figurecaption>
+                </figure>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <figure>
+                  <img src="http://placehold.it/160x160" alt="">
+                  <figurecaption>몽골리안비프, 초간단 소고기 요리</figurecaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>오늘 뭘 먹지</h3>
+      <span>가족과 함꼐 따뜻한 한 끼</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>색다른 고기 반찬! 쫀득한 식감의 소고기 찹쌀구이</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>외식이 필요 없어요~ 재료 듬뿍 얼큰한 부대찌게 만들기</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/157x105" alt="">
+              <figurecaption>밥 한그릇 뚝딱하게 될 거에요 매콤달콤 돼지고기 비빔장</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/157x105" alt="">
+              <figurecaption>향긋한 미나리 향이 폴폴~ 봄의 맛 가득한 미나리전</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/157x105" alt="">
+              <figurecaption>으스러지지 않게 감자볶음 실패 없이 만드는 비결</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>레시피</h3>
+      <span>전문 창작자가 알려주는 레시피</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>채소스틱과 어울리는 캐슈넛 드레싱</figurecaption>
+            </figure>
+            <div>
+              <img src="http://placehold.it/28x28" alt="">
+              <span>소나영 로푸드 전문가</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>호박 모양이라 더욱 귀여운 호박 만주</figurecaption>
+            </figure>
+            <div>
+              <img src="http://placehold.it/28x28" alt="">
+              <span>장선영 파티쉐</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>어부의 파스타, 스파게티 아이 프루티 디 마레</figurecaption>
+            </figure>
+            <div>
+              <img src="http://placehold.it/28x28" alt="">
+              <span>김동기 셰프</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/185x120" alt="">
+              <figurecaption>얼마 남지 않은 이 겨울에 먹으면 좋은 음식</figurecaption>
+            </figure>
+            <div>
+              <img src="http://placehold.it/28x28" alt="">
+              <span>선재스님</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>요리 Tip</h3>
+      <span>재료 손질부터 보관까지</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>달걀가루 부터 식용꽃까지 고명 만드는 방법</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>전자레인지 300% 활용, 간식 만들기 TIP</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <span>닭가슴살</span>
+            <span>촉촉하고 냄새 없이 부드럽게 삶는 법</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>코다리 먹기 좋게</span>
+            <span>손질하고 요리하기</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>제철 음식 우엉</span>
+            <span>아삭한 식감 살리려면?</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>푸드스토리</h3>
+      <span>트렌드와 상식, 식문화까지</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>우유, 멸치 외에 뼈 건강에 좋은 음식은 무엇?</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>구워서, 통조림으로 먹는 파인애플의 유래와 역사</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <span>너무 좋아해!</span>
+            <span>반려견 수제 간식 Top 10</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>반찬과 건강식품</span>
+            <span>모두 훌륭한 '시금치' 효능</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span>피를 맑게 해주는</span>
+            <span>붉은 생명력 '비트'의 모든 것</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+    <!-- th card -->
+    <div class="card">
+      <h3>#맛집</h3>
+      <span>나만 알고 싶은 그곳</span>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>
+                <span>맛있는 한옥</span>
+                <span>기와 지붕 아래 이국적 요리와 맥주 한잔</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/240x160" alt="">
+              <figurecaption>
+                <span>부산에 머문 10시간</span>
+                <span>서울에 없는 4가지 별식을 맛보다</span>
+              </figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x110" alt="">
+              <figurecaption>언제 먹어도 맛있는 간식 다양한 이색 토스트 가게 7</figurecaption>
+            </figure>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <figure>
+              <img src="http://placehold.it/160x110" alt="">
+              <figurecaption>세계의 음식이 모인 이태원 그 중에서 찾은 건강 맞집은?</figurecaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- //th card -->
+
+
+    <div class="tool-area">
+      <div>
+        <button type="button">글자크기 줄이기</button>
+        <button type="button">글자크기 키우기</button>
+      </div>
+
+      <div class="pager">
+        <button type="button">이전 페이지로 이동</button>
+        <button type="button">다음 페이지로 이동</button>
+        <span>현재 페이지 번호</span>
+        <span>전체 페이지 수</span>
+      </div>
+
+      <a href="">Top</a>
     </div>
 
   </main>
@@ -154,12 +1187,41 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-menu">
-      <a href="#">로그인</a>
-      <a href="#">내 정보 관리</a>
-      <a href="#">라이트홈</a>
-      <a href="#">PC버전</a>
-    </div>
+    <ul>
+      <li>
+        <a href="#">로그인</a>
+      </li>
+      <li>
+        <a href="#">내 정보 관리</a>
+      </li>
+      <li>
+        <a href="#">라이트 홈</a>
+      </li>
+      <li>
+        <a href="#">PC버전</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="#">이용약관</a>
+      </li>
+      <li>
+        <a href="#">개인정보처리방침</a>
+      </li>
+      <li>
+        <a href="#">검색광고</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="#">NAVER Corp.</a>
+      </li>
+      <li>
+        <a href="#">네이버 고객센터</a>
+      </li>
+    </ul>
   </footer>
   <!-- //Footer -->
 </body>

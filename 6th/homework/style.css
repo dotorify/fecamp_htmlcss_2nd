@@ -60,7 +60,7 @@ input:focus {
 }
 .header .personal-menu:after,
 .header .homesetting-menu:after,
-.main-menu button:after {
+.nav button:after {
   display: block;
   content: '';
   background: url(images/sp_main.png) no-repeat;
@@ -111,33 +111,33 @@ input:focus {
   display: none;
 }
 
-.main-menu {
+.nav {
   position: relative;
   height: 43px;
   box-sizing: border-box;
   background: #fff;
   border-bottom: 1px solid #e5e5e5;
 }
-.main-menu .category-list {
+.nav .subject-list {
   padding-left: 18px;
   padding-right: 60px;
   white-space: nowrap;
 }
-.main-menu .category-list li {
+.nav .subject-list li {
   display: inline-block;
   transform: translateX(-30px);
 }
-.main-menu .category-list li a {
+.nav .subject-list li a {
   display: inline-block;
   height: 43px;
   padding: 15px 5px;
   box-sizing: border-box;
 }
-.main-menu .category-list li.selected a {
+.nav .subject-list li.selected a {
   border-bottom: 2px solid #16b634;
   color: #16b634;
 }
-.main-menu .gradient {
+.nav .gradient {
   position: absolute;
   top: 0;
   width: 18px;
