@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+}
+
+.header {
+  background: #00c73c;
+  padding: 15px;
+}
+.header .logo-area {
+  display: flex;
+  /*
+   * 네이버 가운데 정렬 방법1: justify-content: space-between;
+   * 네이버 가운데 정렬 방법2: h1에 flex:1
+   */
+
+  /*
+   * 버튼 크기는 최소 35px은 되어야 모바일에서 선택하기 편하다.
+   * psd article에 관련 내용이 있다.
+   *
+   */
+   color: #fff;
+}
+.header .logo-area h1 {
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+.header .logo-area .btn-hamburger {
+  order: -1;
+}
+
+/*
+ * 버튼 초기화 코드
+ * a요소와 비슷한 상태가 된다.
+ * 자바스크립트로의 동작이 필요한 경우 버튼을 사용한다.
+ */
+.header button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  /*
+   * iOS의 경우에는 다음의 코드를 추가해야한다.
+   * os에서 기본으로 제공하는 디자인을 적용하려한다.(강제)
+   * 그 속성을 사용하지 않도록 하는 코드이다.
+   */
+   -webkit-apperance: none;
+   /* image Replacement(IR) 기법 */
+   /*text-indent: -9999px;*/
+   /*  */
+
+   color: inherit;
+}
+
+/*
+
+Naver의 sp_main.png를 사용했을 때
+
+/*
+ * :before (css2.1 문법) >= IE8
+ * ::before (css3 문법) >= IE9
+ */
+/*.header button::before {*/
+  /*
+  content: '';
+  display: block;
+  width: 22px;
+  height: 16px;
+
+   * sprite
+   * 사이즈가 큰 이미지를 사용하는 이유는 레티나에 대응하기 위해서이다.
+   * retina = 4px = 1px
+   * 좌측에서 우측으로만 이동이 가능하며 음수를 사용해야한다.
+   * left: 960, top: 94
+
+   background: url(images/sp_main.png) -480px -47px no-repeat;
+
+   * sp_main 원래 사이즈: 1038 x 1032
+   * sp_main 절반 사이즈: 519 x 516
+
+   background-size: 519px 516px;
+}
+
+.header button {
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+   * iOS의 경우에는 다음의 코드를 추가해야한다.
+   * os에서 기본으로 제공하는 디자인을 적용하려한다.(강제)
+   * 그 속성을 사용하지 않도록 하는 코드이다.
+
+   -webkit-apperance: none;
+   * image Replacement(IR) 기법
+
+   text-indent: -9999px;
+
+   color: transparent;
+}
+
+*/
+.header .nav-area {}
