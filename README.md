@@ -4,7 +4,10 @@
 ----
 # 목차
 
-#### [1. 수업 목표](#수업-목표)
+[1. 수업 목표](#수업-목표)
+[2. 보충 수업 관련 \(복습\)](#보충-수업-관련-복습)
+
+
 ----
 
 ## 수업 목표
@@ -17,15 +20,17 @@
 - 3월 11일 오후 2시부터 4시 (5주차 토요일)
 - 3월 25일 오후 2시부터 4시 (7주차 토요일)
 
-## 1st - 2017.02.07
+---
 
-<b>HTML을 작성할 때, 고민해야하는 것</b>
-- "이 HTML 요소가 정말 최선인가?"
-- 최선이라고 생각했다면 그에 대한 근거를 있어야한다.
-- 마크업에 정답은 없다
-- w3schools.com 들어가지 말 것. 잘못 된 내용이 많다. => [MDN](https://developer.mozilla.org/ko/)이 잘되어 있다.
+### HTML을 작성할 때, 고민해야할 점
+- 이 HTML 요소가 정말 최선인가?
+    - 최선이라고 생각했다면 그에 대한 근거를 있어야한다.
+- 마크업에 정답은 없다.
+- HTML에 본연적 의미를 변경하지 말아라.
+- w3schools.com 들어가지 말 것. 잘못 된 내용이 많다.
+    - [MDN - Mozila Developer N](https://developer.mozilla.org/ko/)이 잘되어 있다.
 
-<b>CSS을 작성할 때, 고민해야하는 것</b>
+## CSS을 작성할 때, 고민해야하는 것
 - Design과 일치하는 CSS를 작성하도록 노력할 것
 
 ### 1. !DOCTYPE html
@@ -581,7 +586,7 @@ h1 {
 
 
 
-## 3rd - 2017.02.18
+## 4th - 2017.02.18
 
 ### CSS
 
@@ -828,7 +833,234 @@ p {
 
 > Float는 이미지를 왼쪽/오른쪽으로
 
-- Flaot된 요소의 높이는 부모가 알지못한다.
+- Float된 요소의 높이는 부모가 알지못한다.
+
+
+
+
+
+## 5th - 2017.02.21
+
+브런치 사이트 만들어보기
+
+## 6th - 2017.02.25
+
+<img src="https://cloud.githubusercontent.com/assets/5626399/23326438/efa592e0-fb40-11e6-899d-f638cbd57073.png" alt="Brunch 1st List">
+
+- 리스트(UL, LI)로 작성
+
+
+## 보충수업 - 2017.02.25
+
+#### div
+
+> division
+
+- 그룹을 이루기위한 요소
+
+## 7th - 2017.02.28
+
+## 8th - 2017.03.04
+
+```html
+  (3) 하드웨어 (센서)
+    - 세로모드(portrait): 세워놓은 상태
+    - 가로모드(landscape): 엎어놓은 상태
+    - Geolocation API, 위치정보 (네트워크 위치를 기점, HTTPS)
+    - [HTTPS](https://ko.wikipedia.org/wiki/HTTPS)
+    - 진동: Vibration API
+    - 사진: Camera API
+
+```
+
+### Form
+
+```html
+<form action="{처리하는 코드}" method="{Request Method}">
+  <!--
+    - Action: 처리하는 코드
+    - Method: 요청 메소드
+      - Get, Post
+  -->
+</form>
+```
+
+#### input
+
+1. Feature
+
+- inline 요소
+- 기본적으로 font를 상속받지 않는다. (font: inherit)
+- label 태그와 같이 사용한다. (접근성 측면에서 장점이 있다.)
+
+2. Attribute
+
+2.1. Type
+<table>
+  <thead>
+    <th>속성</th>
+    <th>모바일</th>
+    <th>비고</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>text</td>
+      <td>기본 키보드</td>
+      <td>생략 가능</td>
+    </tr>
+    <tr>
+      <td>radio</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>tel</td>
+      <td>전화번호 키보드</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>number</td>
+      <td>숫자 키보드</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>email</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>.com등의 URL 입력을 지원하는 키보드</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>date</td>
+      <td>날짜를 선택할 수 있는 콤보박스</td>
+      <td>기본값: 오늘</td>
+    </tr>
+    <tr>
+      <td>time</td>
+      <td>시간을 선택할 수 있는 콤보박스</td>
+      <td>기본값: 현재 시간</td>
+    </tr>
+    <tr>
+      <td>datetime-local</td>
+      <td>날짜와 시간을 선택할 수 있는 콤보박스</td>
+      <td>날짜와 시간을 모두 선택할 수 있다.</td>
+    </tr>
+    <tr>
+      <td>password</td>
+      <td></td>
+      <td>password character로 표시된다.</td>
+    </tr>
+    <tr>
+      <td>submit</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+Tip. iOS에서 input shadow 지우는 방법
+Usage:
+```css
+/* selector */ {
+  -webkit-apperance: none;
+}
+```
+
+2.2. Placeholder
+
+Usage:
+```html
+<input type="text" placeholder="{인풋 내에 보여질 텍스트}">
+```
+
+2.3. Required
+
+- 필수 여부 적용이 가능하다.
+- Safari에서는 지원하지 않는다.
+
+Usage:
+```html
+<input type="text" required>
+```
+
+2.4. Pattern
+
+- 넣을 수 있는 패턴을 정할 수 있다.
+- Safari에서는 지원하지 않는다. Android에서는 가능
+- [Regex101 참고](https://regex101.com/)
+
+Usage:
+
+```html
+<input type="text" pattern="{Regular Expression}">
+```
+
+2.5. Min/Max
+
+- type이 number일 경우에만 가능
+- validation 가능
+- Safari에서는 지원하지 않는다. Android에서는 가능
+
+Usage:
+
+```html
+<input type="text" min={최소값} max={최대값}>
+```
+
+2.6. minlength/maxlength
+
+- type이 number일 경우에만 가능
+- validation 가능
+- Safari에서는 지원하지 않는다. Android에서는 가능
+
+Usage:
+
+```html
+<input type="text" minlength={최소길이} maxlength={최대길이}>
+```
+
+
+### 반응형 웹 디자인
+
+> RWD: Responsive Web Design
+
+As-is: PC면 PC, Mobile이면 Mobile 별도 대응
+To-be: PC로 보던, 모바일로 보던 그 기기에 최적화된 UI를 제공
+
+
+> 해상도대응 - 미디어 쿼리
+> 이미지대응 - 이미지 변경
+> 그리드대응 - 레이아웃 변경
+
+
+Usage:
+```css
+@media <TYPE> and (CONDITION) {
+  /* Rules */
+}
+```
+
+Example:
+```css
+/* 브라우저의 가로사이즈가 720px넘는 경우, 폰트사이즈를 14px */
+@media screen and (min-width:720px) {
+  body {
+    font-size: 14px;
+  }
+}
+```
+
+개발 방법
+1. Mobile First
+2. Desktop First
+
+주의할 점
+- 미디어 쿼리는 기본 CSS 아래에 위치 할 것.
+- [모바일] Margin값 부여하는 것은 지양할 것.
+- Percentage Unit 지향
 
 ----
 #### Reference
@@ -840,3 +1072,4 @@ p {
 [만들어볼만한 페이지:더가디언](https://www.theguardian.com/international)
 [W3C 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항](https://www.w3.org/TR/2013/WD-klreq-20130514/korean/)
 [Google Fonts - Early Access](https://fonts.google.com/earlyaccess)
+[W3C HTML Validator](https://validator.w3.org/)
