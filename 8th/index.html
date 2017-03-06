@@ -14,8 +14,25 @@
   </head>
   <body>
     <header class="header">
-      <h1 class="blind">네이버 회원가입</h1>
-      <span class="logo"><a href="#">NAVER</a></span>
+      <!--
+        AS-IS
+        - code
+          <h1 class="blind">네이버 회원가입</h1>
+          <span class="logo">
+            <a href="#">회원가입</a>
+          </span>
+        - comment
+          h1을 블라인드 처리하지 말고 logo랑 하나로 묶는 게 좋을 거 같네요.
+
+        TO-BE
+        - 아래와 같이 변경 함.
+        - Anchor내에 회원가입을 넣은 이유: VoiceOver와 같은 접근성 툴이용시 이 문서가 네이버 회원가입임을 알게하기 위함.
+      -->
+      <h1>
+        <a href="#" class="logo">NAVER
+          <span class="blind">회원가입</span>
+        </a>
+      </h1>
     </header>
 
     <main class="main">
