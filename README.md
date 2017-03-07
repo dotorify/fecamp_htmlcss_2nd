@@ -1062,6 +1062,89 @@ Example:
 - [모바일] Margin값 부여하는 것은 지양할 것.
 - Percentage Unit 지향
 
+
+## 9th - 2017.03.07
+
+> Step1~3 진행 간 실제 데이터를 사용하지 않고 더미 데이터로 작업한다.
+
+### 개발 프로세스
+
+#### Step1. 기획
+- 기획
+- 상위기획
+    - UI Components 정의
+- 상세기획
+    - 디자이너와 같이 UI 개발
+    - QA
+    - BE 개발
+
+#### Step2. UI 디자인
+- 인터렉션 디자인
+
+#### Step3. UI 개발
+- HTML, CSS
+
+#### Step4. Back-end 개발
+- 서버 개발 (e.g. Domain, DB, API AJAX ...)
+
+#### Step5. QA
+
+#### Step6. 배포
+
+---
+
+<figure>
+  <img src="http://www.logicalposition.com/couch/uploads/image/blog-articles/how-the-web-works/http.png" alt="">
+  <figcaption>[Figure 1] HTTP Request & Response</figcaption>
+</figure>
+
+<figure>
+  <img src="https://i-msdn.sec.s-msft.com/dynimg/IC564167.png" alt="">
+  <figcaption>[Figure 2] MVVM Pattern</figcaption>
+</figure>
+
+---
+
+신입 때 들었던 생각
+> 아래 나열된 순서대로 생각을 해보면 좋다.
+
+- 생각보다 어렵다.
+- 어떤 요소를 사용해야하지?
+    - 당장은 크게 고민하지 말아라.
+- 클래스명은 어떻게 지을까?
+  ```css
+  /*
+   * Tip. Component이름 + 요소의 목적
+   *
+   * example:
+   * .list
+   * .list .list-thumb
+   * .list .list-big (폰트크기가 큰)
+   */
+  ```
+  or
+  [Darum Naming Convention](http://darum.daum.net/convention/name)
+  [Naver Naming Convention](http://nuli.navercorp.com/sharing/fe/coding)
+  [Airbnb Naming Convetion](https://github.com/airbnb/css)
+
+- 브라우저 지원은 어디까지 고려해야할까?
+- 예외처리
+- 접근성
+- 자바스크립트
+- 범용성
+
+
+### 학습에 도움이 되는 사이트
+
+- [Mozilla MDN](https://developer.mozilla.org/ko/)
+
+> W3School 들어가지 말 것 (표준에 위배되는 내용들이 포함되어 있음.)
+
+### Glossary
+
+- Crawling: 로봇 혹은 사용자가 사이트를 긁어가는 행위
+
+
 ----
 #### Reference
 
