@@ -1127,9 +1127,54 @@ Example:
   [Naver Naming Convention](http://nuli.navercorp.com/sharing/fe/coding)
   [Airbnb Naming Convetion](https://github.com/airbnb/css)
 
+- 디바이스
+  ```
+  ├── 하드웨어
+  │   ├── PC (마우스)
+  │   └── 모바일 (터치)
+  │
+  └── OS (default browser)
+      ├── iOS: Safari
+      ├── Android: Chrome
+      ├── Window: IE Edge
+      ├── Mac: Safari
+      └── Linux: Firefox
+
+  ==========================
+  모바일과 PC를 나누는 기준점
+  1. Wild / Tilt (?)
+  2. 터치 / 커서
+  ```
 - 브라우저 지원은 어디까지 고려해야할까?
-- 예외처리
+  ```
+  - 정책을 세울 때 정해야 한다.
+  - IE버전을 몇 까지 지원할지 고민해야 한다.
+    > choeun's: 최신버전 -2 단계까지 지원 (IE 9~10부터 지원)
+  - 서로다른 브라우저에서 최대한 동일하게 보이도록 하려면
+    > Reset.css 또는 Normalize.css를 사용하면 좋다.
+      (모든 브라우저에서 똑같이 보이도록 하는 것은 힘들다.)
+  ```
+- 예외처리 (정책)
+  ```
+  - 콘텐츠 길이가 길어질 경우
+    > 말 줄임처리
+  - 부모 사이즈가 변경되는 경우
+    > 부모 요소가 변경됨에 따라 자식 요소의 사이즈도 같이 변경 되도록 하는 것이 좋다.
+      부모 width값 설정, 자식에는 width값 최대한 설정하지 않는다.
+  - 기기가 달라질 경우
+  - 모바일페이지를 개발해놓고 PC에서 접속했을 경우
+  ```
 - 접근성
+  ```
+  우리나라: 장애인 차별 금지 및 권리 규제에 관한 법률(장차법) => KWCAG 2.1
+  국제: WCAG
+
+  핵심: 누구나 사용가능할 수 있어야한다.
+
+  예를 들어,
+  Contrast Ratio 비율 준수해야한다.
+  폰트컬러가 #666보다 미만이면 장차법 위반이다.
+  ```
 - 자바스크립트
 - 범용성
 
@@ -1137,12 +1182,17 @@ Example:
 ### 학습에 도움이 되는 사이트
 
 - [Mozilla MDN](https://developer.mozilla.org/ko/)
+- [IE CSS 호환성](https://msdn.microsoft.com/en-us/library/hh781508(v=vs.85).aspx)
+- [KWCAG 2.1 한국형 웹 콘텐츠 접근성 지침](http://www.wah.or.kr/Participation/guide.asp)
+- [WCAG 2.0 지침이 전하는 전경색과 배경색의 명도 대비](http://naradesign.net/wp/2009/07/01/947/)
+- [WCAG 2.0 Documentation](https://www.w3.org/WAI/intro/wcag)
 
 > W3School 들어가지 말 것 (표준에 위배되는 내용들이 포함되어 있음.)
 
 ### Glossary
 
 - Crawling: 로봇 혹은 사용자가 사이트를 긁어가는 행위
+- HasLayout: IE만의 Layout
 
 
 ----
