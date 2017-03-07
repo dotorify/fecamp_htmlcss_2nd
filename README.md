@@ -1176,8 +1176,12 @@ Example:
   폰트컬러가 #666보다 미만이면 장차법 위반이다.
   ```
 - 자바스크립트
-
 - 범용성
+- 디버깅
+  ```
+  - 크롬 최신버전, Mac OS, 내 사이트의 사이즈와 브라우저 사이즈를 비교했을 떄, 어떤 상황에서 장애가 나는가
+  - 내 사이트가 width가 900px, 브라우저 크기가 그 보다 작아요. 근데 xx가 안되요. 왜 안될까?
+  ```
 
 어떻게 좋은 개발자가 될 수 있을까?
 - 오픈소스 기여
@@ -1207,6 +1211,7 @@ Example:
 - [KWCAG 2.1 한국형 웹 콘텐츠 접근성 지침](http://www.wah.or.kr/Participation/guide.asp)
 - [WCAG 2.0 지침이 전하는 전경색과 배경색의 명도 대비](http://naradesign.net/wp/2009/07/01/947/)
 - [WCAG 2.0 Documentation](https://www.w3.org/WAI/intro/wcag)
+- [프론트엔드에 테스트를 도입](http://techhtml.github.io/blog/2016/05/)
 
 > W3School 들어가지 말 것 (표준에 위배되는 내용들이 포함되어 있음.)
 
