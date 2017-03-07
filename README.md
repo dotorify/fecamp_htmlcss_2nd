@@ -2,27 +2,29 @@
 패스트캠퍼스 HTML&amp;CSS 입문 2기
 
 ----
-# 목차
-
-[1. 수업 목표](#수업-목표)
-[2. 보충 수업 관련 \(복습\)](#보충-수업-관련-복습)
+## 목차
+- [1. 수업 목표](#수업-목표)
+- [2. 보충 수업 관련 \(복습\)](#보충-수업-관련-복습)
 
 
 ----
 
-## 수업 목표
+## 수업 관련
+
+**목표**
 - 이론적으로 HTML / CSS 접근
 - 실무레벨에서 접근
 - 미래의 기술에 대해 아는 것
 
-## 보충 수업 관련 (복습)
+**보충 수업 관련 (복습)**
 - 2월 25일 오후 2시부터 4시 (3주차 토요일)
 - 3월 11일 오후 2시부터 4시 (5주차 토요일)
 - 3월 25일 오후 2시부터 4시 (7주차 토요일)
 
----
 
-### HTML을 작성할 때, 고민해야할 점
+## 1st - 2017.02.07
+
+**HTML을 작성할 때, 고민해야할 점**
 - 이 HTML 요소가 정말 최선인가?
     - 최선이라고 생각했다면 그에 대한 근거를 있어야한다.
 - 마크업에 정답은 없다.
@@ -30,7 +32,7 @@
 - w3schools.com 들어가지 말 것. 잘못 된 내용이 많다.
     - [MDN - Mozila Developer N](https://developer.mozilla.org/ko/)이 잘되어 있다.
 
-## CSS을 작성할 때, 고민해야하는 것
+**CSS을 작성할 때, 고민해야하는 것**
 - Design과 일치하는 CSS를 작성하도록 노력할 것
 
 ### 1. !DOCTYPE html
@@ -1123,9 +1125,9 @@ Example:
    */
   ```
   or
-  [Darum Naming Convention](http://darum.daum.net/convention/name)
-  [Naver Naming Convention](http://nuli.navercorp.com/sharing/fe/coding)
-  [Airbnb Naming Convetion](https://github.com/airbnb/css)
+  - [Darum Naming Convention](http://darum.daum.net/convention/name)
+  - [Naver Naming Convention](http://nuli.navercorp.com/sharing/fe/coding)
+  - [Airbnb Naming Convetion](https://github.com/airbnb/css)
 
 - 디바이스
   ```
@@ -1196,10 +1198,10 @@ Example:
 - 객체지향이 뭔지, 함수형이 뭔지, 절차지향이 뭔지
 - 컴파일러에 대한 이해, OS에 대한 이해, 브라우저에 대한 이해
 
-신입
+신입 프론트엔드 개발자가 알아야할 것 들
 - 버전관리 (git, svn)
 - 오픈소스 기여해본 경험
-- 블로그
+- 블로그 운영
 - HTML, CSS, 웹표준, 웹접근성, 시맨틱웹
 - 자바스크립트의 기초
 
@@ -1221,14 +1223,18 @@ Example:
 - HasLayout: IE만의 Layout
 
 
-----
-#### Reference
+## 수행한 과제
 
-[Emoji](http://unicode.org/emoji/charts/full-emoji-list.html)
-[Microdata](): 검색엔진 상위에 노출하기 위한...
-[SK 신현석:HTML5.1 변경사항](https://hyeonseok.com/soojung/webstandards/2017/01/28/808.html)
-[CSS 반복 체크:CSS-Purge](https://github.com/rbtech/css-purge)
-[만들어볼만한 페이지:더가디언](https://www.theguardian.com/international)
-[W3C 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항](https://www.w3.org/TR/2013/WD-klreq-20130514/korean/)
-[Google Fonts - Early Access](https://fonts.google.com/earlyaccess)
-[W3C HTML Validator](https://validator.w3.org/)
+- [네이버 모바일 회원가입 페이지](http://codepen.io/dotorify/pen/KWMRJw)
+- [네이버 모바일 메인 페이지](http://codepen.io/dotorify/pen/EWNYgW)
+
+## Reference
+
+- [Emoji](http://unicode.org/emoji/charts/full-emoji-list.html)
+- [Microdata](): 검색엔진 상위에 노출하기 위한...
+- [SK 신현석:HTML5.1 변경사항](https://hyeonseok.com/soojung/webstandards/2017/01/28/808.html)
+- [CSS 반복 체크:CSS-Purge](https://github.com/rbtech/css-purge)
+- [만들어볼만한 페이지:더가디언](https://www.theguardian.com/international)
+- [W3C 한국어 텍스트 레이아웃 및 타이포그래피를 위한 요구사항](https://www.w3.org/TR/2013/WD-klreq-20130514/korean/)
+- [Google Fonts - Early Access](https://fonts.google.com/earlyaccess)
+- [W3C HTML Validator](https://validator.w3.org/)
